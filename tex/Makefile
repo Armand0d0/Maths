@@ -6,7 +6,7 @@ all:
 	$(EXE) main.tex
 	cp main.pdf ../Exos_sympas.pdf
 	
-	
+
 
 watch:
 	while true; do \
