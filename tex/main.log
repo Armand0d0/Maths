@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  27 OCT 2023 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  27 OCT 2023 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -655,12 +655,10 @@ LaTeX Info: Redefining \nameref on input line 29.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
 
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
@@ -672,17 +670,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 2.
 
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [2]
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[3]
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 123--128
 
  []
 
-[4]
+[3]
 Overfull \hbox (3.83678pt too wide) detected at line 158
  \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; l\OT1/cmr/m/n/10 ) \OMS/cmsy/
@@ -704,12 +704,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-[5] [6]
+[4] [5]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 87.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [7]
+) [6]
 (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -718,9 +718,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18398 strings out of 480171
- 316133 string characters out of 5894488
- 1036060 words of memory out of 5000000
+ 18397 strings out of 480171
+ 316127 string characters out of 5894488
+ 1046060 words of memory out of 5000000
  36128 multiletter control sequences out of 15000+600000
  484647 words of font info for 71 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -731,9 +731,9 @@ Here is how much of TeX's memory you used:
 0.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
 440.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
 x1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1200.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecrm1728.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+crm1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecrm1200.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
@@ -748,10 +748,10 @@ fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd
 /stmary10.pfb>
-Output written on main.pdf (7 pages, 215264 bytes).
+Output written on main.pdf (6 pages, 214750 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
+ 363 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
