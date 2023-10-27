@@ -15,7 +15,6 @@ push:
 watch:
 	while true; do \
 		inotifywait -qre close_write .; \
-		#inotifywait $(PAPER); \
 		make all; \
 	done
 
