@@ -7,7 +7,6 @@ all:
 	cp main.pdf ../Exos_sympas.pdf
 	
 push:
-	make all
 	git add ..
 	git commit -m "typing..."
 	git push
