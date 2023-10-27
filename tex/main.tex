@@ -30,21 +30,53 @@
 
 \maketitle%---------------------------------------------------------------
 
+\newcommand{\mn}[1]{\ensuremath{\mathcal{M}_n(\mathbb{#1})}}
+
 \paragraph{Exercice 1*:}
 Soit $(G,.)$ un groupe fini dont tous les élément sont d'ordre 2, montrer que son
 cardinal est une puissance de 2.
 
+\paragraph{Exercice 2*(d'après \cite{igor}):}
+Soit $A_1, \ldots,A_p$ un ensemble de p matrices de $GL_n(\mathbb{K})$ stable
+par produit, montrer que \[\ tr\Biggl(\sum_{i=1}^p A_i\Biggr) \equiv 0\left[p\right] \]
+
+\paragraph{Exercice 3*:}
+Soient $a,b\in \mathbb{R},\;\; a<b$ et $f:\left[a,b\right] \to \mathbb{R}$ continue 
+sur $\left[a,b\right]$, dérivable sur $\left]a,b\right[$ nulle en $a$ et $b$.
+ Soit $\lambda \in \mathbb{R}$.
+Démontrer que $f' + \lambda f$ s'annule sur $\left]a,b\right[$. 
 
 
-\paragraph{Exercice 2**(RMS 2014):}
+\paragraph{Exercice 4:}
+    Retrouver le binome de Newton à l'aide de la formule de Leibniz.
 
-Determiner une CNS sur $A$ et $B$ dans $M_n(\mathbb{C})$ pour que \[\
+\paragraph{Exercice 5 (Bézout dans \mn{Z}):}
+Soient $A,B \in \mn{Z}$ telles que $ det(A) \wedge det(B) = 1$, montrer qu'il
+existe $U,V \in \mn{Z}$ telles que : \[\ AU+BV = I_n\]
+
+\paragraph{Exercice 5*:}
+Soit $M \in \mn{C}$, démontrer que $M$ est diagonalisable si et seulement si
+sa classe de simlitude est fermée.
+
+\paragraph{Exercice 6**(Théorème de Maschke):}
+Soit $E$ un espace vectoriel de dimension finie et G un sous groupe fini de 
+$GL(E)$. Démontrer que tout sous espace vectoriel de $E$ stable par tous les éléments de $G$ admet un 
+supplémentaire également stable par tout les élément de $G$.
+
+\paragraph{Exercice 7**:} Démontrer que $GL_n(\mathbb{C})$ est connexe par
+ arcs.
+
+\paragraph{Exercice 8**(ENS Lyon 2014):}
+
+Determiner une CNS sur $A$ et $B$ dans $\mn{C})$ pour que \[\
 \forall k \in \mathbb{N} \quad tr(A^k) = tr(B^k) \quad (*) \]
 \paragraph{Solution :}
 Pour commencer simplifions le problème et cherchons les matrices $A$ qui vérifient \[\
 \forall k \in \mathbb{N^*}\quad tr(A^k) = 0
 \quad (*) \] C'est classique, on commence par observer que toutes les matrices 
-nilpotentes fonctionnent, puis on montre que ce sont les seules : démontrons que si $A \in M_n(\mathbb{C}) $ verifie $(*)$ alors son spectre est réduit à \{0\}. Notons $ \lambda_1,..., \lambda_r$ les valeurs propres non nulles de $A$ où les $\lambda_i$ sont distinct 2 à 2, $n_i \geq 1$ la multiplicité de $\lambda_i$ et $n_0 \geq 0$ la multiplicité de 0. On raisonne par l'absurde en supposant $r \geq 1$,
+nilpotentes fonctionnent, puis on montre que ce sont les seules :
+ démontrons que si $A \in \mn{C}) $ verifie $(*)$ alors son
+  spectre est réduit à \{0\}. Notons $ \lambda_1,..., \lambda_r$ les valeurs propres non nulles de $A$ où les $\lambda_i$ sont distinct 2 à 2, $n_i \geq 1$ la multiplicité de $\lambda_i$ et $n_0 \geq 0$ la multiplicité de 0. On raisonne par l'absurde en supposant $r \geq 1$,
 $(**)$ pour $k\in \llbracket 0, r \rrbracket $ donne : 
 \begin{alignat*}{6}
 n_0 + &n_1\lambda_1^0 &+\ldots &+n_r\lambda_r^0 & = n\\
@@ -70,7 +102,7 @@ Pour le cas général ont peut remarquer que si $A$ et $B$ ont le même polynome
  caractéristique alors elles vérifient $(*)$ de plus la réciproque est vraie 
  si $B=0$ d'après ce qui précède. On va montrer qu'elle est toujours vraie. 
  Pour une matrice $M$ notons $\chi_{_M}$ son polynome caractéristique et $\Pi{_M}$ 
- son polynome minimal. Fixons $A$ et $B$ dans $M_n(\mathbb{C})$ vérifiant $(*) $.
+ son polynome minimal. Fixons $A$ et $B$ dans $\mn{C})$ vérifiant $(*) $.
   D'abord, la linéarité de la trace permet d'écrire : \[\ \forall P \in 
   \mathbb{C}\left[X\right] \quad tr(P(A)) = tr(P(B)) \] 
 Soit $k \in \mathbb{N}^*$ pour  $P = \chi_{_B}^k$ on a donc 
@@ -99,7 +131,7 @@ Il ne reste plus qu'a montrer que les multiplicités des valeurs propres sont le
 \end{pmatrix}\] On retombe sur une matrice de Vandermonde inversible et on conclut que \[\ \forall i \in \llbracket 1,r \rrbracket \quad a_i= b_i \] ce qui conclut.
 
 
-\paragraph{Exercice 3***(D'après \cite{ulm2019}):}    $\\$
+\paragraph{Exercice 9***(D'après \cite{ulm2019}):}    $\\$
 
 Calculer  \[\ \lim_{x\to\infty}\Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} \]
 
@@ -123,7 +155,7 @@ Soit  $x \in \mathbb{R}$:
 Alors \[\ S(x) := \Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} = \;\; x^{\frac{1}{x}}\Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}} \] D'abord, $x^{\frac{1}{x}} = e^{\frac{\ln(x)}{x}} \to 1$ Puis pour $x \geq 1$ : \[\ \Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}}  = \Biggl(\int_0^1 (t^{-t})^x \mathrm{d}t\Biggr)^{\frac{1}{x}} = \|f\|_{_x} \] Où $f: t \mapsto t^{-t}$. On se rappelle alors de l'exercice affirmant que \[\ \|f\|_{_x} \xrightarrow[x \to \infty]{} \|f\|_{_\infty} = \sup_{t\in [0,1]}|f(t)| \] Avec une rapide étude de $f$ on trouve que sa borne sup vaut $e^{\frac{1}{e}}$. Ainsi, \[\ \lim_{x \to \infty}S(x) = e^{\frac{1}{e}}\quad _{_\square} \] 
 
 
-\paragraph{Exercice 4***(D'après \cite{igor}):}
+\paragraph{Exercice 10***(D'après \cite{igor}):}
 
 Soit (E,d) un espace métrique
  compact et \begin{math} 

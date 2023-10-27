@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  27 OCT 2023 22:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  28 OCT 2023 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -673,17 +673,17 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 128--133
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
 
  []
 
 [3]
-Overfull \hbox (3.83678pt too wide) detected at line 163
+Overfull \hbox (3.83678pt too wide) detected at line 195
  \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; l\OT1/cmr/m/n/10 ) \OMS/cmsy/
 m/n/10 ^^T \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/
@@ -700,13 +700,13 @@ n/10 (\OML/cmm/m/it/10 l; f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 [4] [5]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-92.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+24.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [6]
@@ -718,13 +718,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18398 strings out of 480171
- 316138 string characters out of 5894488
- 1046060 words of memory out of 5000000
- 36128 multiletter control sequences out of 15000+600000
+ 18406 strings out of 480171
+ 316217 string characters out of 5894488
+ 1041060 words of memory out of 5000000
+ 36129 multiletter control sequences out of 15000+600000
  484647 words of font info for 71 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 60i,12n,68p,1542b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,68p,1542b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.60
 0pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.
 600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
@@ -748,10 +748,10 @@ fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd
 /stmary10.pfb>
-Output written on main.pdf (6 pages, 215196 bytes).
+Output written on main.pdf (6 pages, 223780 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
