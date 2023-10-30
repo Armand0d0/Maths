@@ -31,14 +31,65 @@
 \maketitle%---------------------------------------------------------------
 
 \newcommand{\mn}[1]{\ensuremath{\mathcal{M}_n(\mathbb{#1})}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\setlength\parindent{0pt}
+\newcommand{\exercice}[3]{
+  \fbox{%
+\begin{minipage}{1.0\textwidth}
+  \paragraph{Exercie #1:} #2
 
-\paragraph{Exercice 1*:}
+\end{minipage}
+}
+  \paragraph{Solution :} #3 $ \\ \\ \\$
+}%-------------------------------------------------------------------------------------
+\exercice{1*}{
 Soit $(G,.)$ un groupe fini dont tous les élément sont d'ordre 2, montrer que son
-cardinal est une puissance de 2.
-
-\paragraph{Exercice 2*(d'après \cite{igor}):}
-Soit $\mathbb{K}$ un corps et $A_1, \ldots,A_p$ un ensemble de $p$ matrices de $GL_n(\mathbb{K})$ stable
+cardinal est une puissance de 2.}
+{On propose 2 solution, la première très astucieuse et jolie et la deuxième plus accessible et généralisable.
+\paragraph{Solution 1:}
+Cette solution consiste à remarquer que $(G,\cdot,\wedge)$ est un $\Z/2\Z$-espace vectoriel (ça a un sens car $\Z/2\Z$ est un corps).\\
+Où la loi externe $\wedge$ est définie par 
+$ \wedge: \left\{ \begin{array}{rcl} \Z/2\Z\times G& \longrightarrow & G \\
+   (n,x) & \longmapsto & x^n \\ \end{array} \right. $
+ En effet : \\ - $ (G,.)$ est un groupe abélien : 
+Soient $x,y \in G\quad  1 = (xy)^2 = xyxy $ et en composant a gauche par 
+$x$ et a droite par $y$ on a bien $xy = yx$.\\
+- $\forall x\in G \quad x^1 = x$\\
+- $\forall x,y \in G, n\in \Z/2\Z \quad (xy)^n = x^ny^n$ car $G$ est abélien.\\
+- $\forall n,m \in \Z/2\Z, x\in G \quad x^{n+m} = x^nx^m$\\
+- $\forall n,m \in \Z/2\Z, x\in G \quad (x^n)^m = x^{nm}$\\
+cet espace vectoriel est de dimension finie  car il est fini ( tout famille de taille supérieure à $card(G)$ est liée). Notons $k$ sa dimension, la fixation d'une base de $G$ induit un isomorphisme entre $G$ et $(\Z/2\Z)^k$ ils sont donc de même cardinal :  $2^k$.
+\setlength\parindent{0pt}
+\paragraph{Solution 2:}
+On démontre par récurrence sur $k$ la propriété : ``pour tout groupe $G$ dont tous les éléments sont d'ordre 2 : $card(G) \leq 2^k \implies \exists p \in \mathbb{N}$ tel que $card(G) = 2^p$ ''. Avoir cette propriété pour tout $k$ permet clairement de conclure. \\
+Initialisation :  si $k = 0$ c'est bon.\\
+Hérédité : supposons la propriété réalisée pour $k \geq 1$, soit $G$
+un groupe dont tous les éléments sont d'ordre 2 tel 
+que $card(G) \leq 2^{k+1}$ , si $card(G) \leq 2^k$ c'est bon par 
+l'hypothèse, sinon soit $H$ un sous groupe strict de $G$ de cardinal 
+maximal (existe car ils sont en nombre fini) et $a \in G\setminus H$ 
+alors $G = H \cup aH$ et $H\cap aH=\emptyset$, en effet $H\cup aH$ est 
+un sous groupe de $G$ :
+\par\leftskip 10pt
+-$ 1 \in H\cup aH$\\
+-Soient $x,y \in H\cup aH$
+\par\leftskip 20pt
+si $x,y \in H$ alors $xy^{-1} \in H \subset H\cup aH$\\si $x,y\in aH\quad \exists h,h'\in H \quad xy^{-1} = ah(ah')^{-1} = hh'^{-1} \in H$ car $G$ est commutatif (voir Solution 1)\\ si $x\in H,y\in aH$ (ou le contraire, par symétrie) $\exists h,h'\in H \quad xy^{-1} = h(ah')^{-1} = ahh'^{-1} \in aH$ car $a^{-1} =a$.\par
+\leftskip 0pt
+Alors $H\cup aH = G$ par maximalité de $H$. Soit $x\in H \cap aH \quad \exists h,h' \in H \quad h' = ah$ absurde car alors $a= h'h^{-1} \in H$. Ainsi $H\cap aH=\emptyset$. En vertue de la bijection $x \mapsto ax,\quad card(H) =card(aH)$. On déduit de ces 3 points que $card(G) = 2card(H)$, donc $card(H) \leq 2^k$ et par l'hypothèse de récurrence $\exists p \in \mathbb{N} \quad card(H) = 2^p$ puis $card(G) = 2^{p+1}$.
+}
+\exercice{2*(d'après \cite{igor})}%---------------------------------------------------------------
+{
+  Soit $\mathbb{K}$ un corps et $A_1, \ldots,A_p$ un ensemble de $p$ matrices de $GL_n(\mathbb{K})$ stable
 par produit, montrer que \[\ tr\Biggl(\sum_{i=1}^p A_i\Biggr) \equiv 0\left[p\right] \]
+}
+{
+  Notons $G$ cet ensemble et $S = \sum_{i=1}^pA_i$, il faut remarquer que si $j \in \llbracket 1 , p \rrbracket$ 
+\[\ \sum_{i=1}^pA_jA_i = \sum_{i=1}^pA_i = S \text{ car } M \mapsto A_jM \text{ est une permutation de } G \] \[\ \text{Alors, }
+S^2 = \Biggl(\sum_{i=1}^pA_i\Biggr)^2 =  \sum_{i=1}^p\sum_{j=1}^pA_iA_j = p\sum_{i=1}^pA_i = pS
+\]  \[\ \text{Mais alors, }\Bigl(\frac{S}{p}\Bigr)^2 = \frac{pS}{p^2} = \frac{S}{p} \] $\frac{S}{p}$ est donc un projecteur,  sa trace est donc égale à son rang, c'est donc un entier et par linéarité, la trace de S est divisible par $p$. 
+
+}
 
 \paragraph{Exercice 3*:}
 Soient $a,b\in \mathbb{R},\;\; a<b$ et $f:\left[a,b\right] \to \mathbb{R}$ continue 
@@ -46,14 +97,32 @@ sur $\left[a,b\right]$, dérivable sur $\left]a,b\right[$ nulle en $a$ et $b$.
  Soit $\lambda \in \mathbb{R}$.
 Démontrer que $f' + \lambda f$ s'annule sur $\left]a,b\right[$. 
 
+\paragraph{Solution :}
 
+Les hypothèses ressemblent à celles du théorème de Rolle, on va chercher à l' appliquer, mais à quelle fonction ? \\
+Analyse : On va chercher par exemple $g$ dérivable vérifiant \\
+- $g(a) = g(b)$\\
+- $g'(c) = 0 \implies f'(c) + \lambda
+f(c) = 0$\\
+le deuxième point serait vérifié si par exemple $g'= (f'+\lambda f)h$ avec $h$ une fonction strictement positive. Choisissons $h$ de manière à pouvoir primitiver $g'$ on remarque que $g'$ est la dérivée du produit $fh$ si $h' =\lambda h$ ce qui fonctionne avec $h : x\mapsto e^{\lambda x}$.\\
+Synthèse : On applique le théorème de Rolle à $g:x\mapsto f(x)e^{\lambda x}, g $ est continue sur $\left]a,b\right[$, dérivable sur $\left[a,b\right]$, nulle en $a$ et $b$ donc $ \exists c \in \left]a,b\right[ \quad g'(c) = 0 $ or $g'(x) = (f'(x) + \lambda f(x))e^{\lambda x}$ donc $f'(c) + \lambda f(c) = 0$. 
 \paragraph{Exercice 4:}
     Retrouver le binome de Newton à l'aide de la formule de Leibniz.
-
+    \paragraph{Solution :}
+    Si $a\in \mathbb{C}$ on cherche une fonction $f$ de classe $\mathcal{C}^{\infty}$ pour laquelle on ait une relation simple entre $f^{(k)}$ et $a^k$ pour tout $k$. Dans la lignée de l'exercice précédant on va considerer les fonctions exponentielles, posons : $f_a : x \mapsto e^{ax}$ alors $f_a^{(k)} = a^kf_a$.
+    Soient $a,b \in \mathbb{C},n\in \mathbb{N}$ on a avec Leibniz : \[\
+    (a+b)^n = (a+b)^ne^{(a+b)×0} =f_{a+b}^{(n)}(0) = (f_af_b)^{(n)}(0)\] \[\ = \sum_{k=0}^n\binom{n}{k}f_a^{(k)}(0)f_b^{(n-k)}(0) = \sum_{k=0}^n \binom{n}{k}a^kb^{n-k}
+    \]
 \paragraph{Exercice 5 (Bézout dans \mn{Z}):}
 Soient $A,B \in \mn{Z}$ telles que $ det(A) \wedge det(B) = 1$, montrer qu'il
 existe $U,V \in \mn{Z}$ telles que : \[\ AU+BV = I_n\]
 
+\paragraph{Solution :}
+
+C'est direct quand on pense à la formule $MCom(M)^{T}= det(M)I_n$,
+car une relation de Bézout dans $\mathbb{Z}$ permet d'écrire : \[\ 
+\exists u,v \in \mathbb{Z} \quad ACom(A)^{T}u + BCom(B)^Tv = (det(A)u+det(B)v)I_n = I_n
+\]
 \paragraph{Exercice 6*:}
 Soit $M \in \mn{C}$, démontrer que $M$ est diagonalisable si et seulement si
 sa classe de simlitude est fermée.

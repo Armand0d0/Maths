@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  28 OCT 2023 01:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  31 OCT 2023 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -670,20 +670,47 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 2.
 
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 80--80
+[][] 
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 80--92
+[] 
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 114.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 114.
+
+Missing character: There is no Ö in font cmr7!
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-[3]
-Overfull \hbox (3.83678pt too wide) detected at line 195
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 229--234
+
+ []
+
+
+Overfull \hbox (3.83678pt too wide) detected at line 264
  \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; l\OT1/cmr/m/n/10 ) \OMS/cmsy/
 m/n/10 ^^T \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/
@@ -699,18 +726,17 @@ n/10 (\OML/cmm/m/it/10 l; f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10
 10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10 ))
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--200
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[4] [5]
+[6]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-25.
+94.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [6]
-(./main.aux)
+) [7] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -718,11 +744,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18406 strings out of 480171
- 316217 string characters out of 5894488
- 1040060 words of memory out of 5000000
- 36129 multiletter control sequences out of 15000+600000
- 484647 words of font info for 71 fonts, out of 8000000 for 9000
+ 18418 strings out of 480171
+ 316342 string characters out of 5894488
+ 1044060 words of memory out of 5000000
+ 36132 multiletter control sequences out of 15000+600000
+ 484982 words of font info for 72 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  60i,12n,68p,866b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.60
@@ -748,10 +774,10 @@ fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd
 /stmary10.pfb>
-Output written on main.pdf (6 pages, 223599 bytes).
+Output written on main.pdf (7 pages, 236781 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 406 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
