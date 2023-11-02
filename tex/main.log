@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  31 OCT 2023 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  3 NOV 2023 00:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,24 +693,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
  []
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 114.
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 109--109
+[][] 
+ []
 
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 114.
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 109--117
+[] 
+ []
 
-Missing character: There is no Ö in font cmr7!
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 117--127
+[] 
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 127--135
+[] 
+ []
+
+[2]
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 135--150
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+
+ []
+
+[3]
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 150--153
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 219--219
+[][] 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Overfull \hbox (3.83678pt too wide) detected at line 264
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 242--242
+[][] 
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 308--308
+[][] 
+ []
+
+[6]
+Overfull \hbox (3.83678pt too wide) detected at line 308
  \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; l\OT1/cmr/m/n/10 ) \OMS/cmsy/
 m/n/10 ^^T \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/
@@ -726,17 +809,26 @@ n/10 (\OML/cmm/m/it/10 l; f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10
 10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10 ))
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--308
 
  []
 
-[6]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-94.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+11.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [7] (./main.aux)
+) [9] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -744,13 +836,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18418 strings out of 480171
- 316342 string characters out of 5894488
- 1044060 words of memory out of 5000000
- 36132 multiletter control sequences out of 15000+600000
- 484982 words of font info for 72 fonts, out of 8000000 for 9000
+ 18421 strings out of 480171
+ 316364 string characters out of 5894488
+ 1034060 words of memory out of 5000000
+ 36130 multiletter control sequences out of 15000+600000
+ 484647 words of font info for 71 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 60i,12n,68p,866b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,68p,1153b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.60
 0pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.
 600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
@@ -769,15 +861,16 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd
-/stmary10.pfb>
-Output written on main.pdf (7 pages, 236781 bytes).
+msfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/
+stmary10.pfb>
+Output written on main.pdf (9 pages, 258233 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 145 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

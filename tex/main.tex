@@ -91,13 +91,13 @@ S^2 = \Biggl(\sum_{i=1}^pA_i\Biggr)^2 =  \sum_{i=1}^p\sum_{j=1}^pA_iA_j = p\sum_
 
 }
 
-\paragraph{Exercice 3*:}
+\exercice{3*}{
 Soient $a,b\in \mathbb{R},\;\; a<b$ et $f:\left[a,b\right] \to \mathbb{R}$ continue 
 sur $\left[a,b\right]$, dérivable sur $\left]a,b\right[$ nulle en $a$ et $b$.
  Soit $\lambda \in \mathbb{R}$.
 Démontrer que $f' + \lambda f$ s'annule sur $\left]a,b\right[$. 
 
-\paragraph{Solution :}
+}{
 
 Les hypothèses ressemblent à celles du théorème de Rolle, on va chercher à l' appliquer, mais à quelle fonction ? \\
 Analyse : On va chercher par exemple $g$ dérivable vérifiant \\
@@ -106,40 +106,58 @@ Analyse : On va chercher par exemple $g$ dérivable vérifiant \\
 f(c) = 0$\\
 le deuxième point serait vérifié si par exemple $g'= (f'+\lambda f)h$ avec $h$ une fonction strictement positive. Choisissons $h$ de manière à pouvoir primitiver $g'$ on remarque que $g'$ est la dérivée du produit $fh$ si $h' =\lambda h$ ce qui fonctionne avec $h : x\mapsto e^{\lambda x}$.\\
 Synthèse : On applique le théorème de Rolle à $g:x\mapsto f(x)e^{\lambda x}, g $ est continue sur $\left]a,b\right[$, dérivable sur $\left[a,b\right]$, nulle en $a$ et $b$ donc $ \exists c \in \left]a,b\right[ \quad g'(c) = 0 $ or $g'(x) = (f'(x) + \lambda f(x))e^{\lambda x}$ donc $f'(c) + \lambda f(c) = 0$. 
-\paragraph{Exercice 4:}
+}
+\exercice{4}{
     Retrouver le binome de Newton à l'aide de la formule de Leibniz.
-    \paragraph{Solution :}
+}{
     Si $a\in \mathbb{C}$ on cherche une fonction $f$ de classe $\mathcal{C}^{\infty}$ pour laquelle on ait une relation simple entre $f^{(k)}$ et $a^k$ pour tout $k$. Dans la lignée de l'exercice précédant on va considerer les fonctions exponentielles, posons : $f_a : x \mapsto e^{ax}$ alors $f_a^{(k)} = a^kf_a$.
     Soient $a,b \in \mathbb{C},n\in \mathbb{N}$ on a avec Leibniz : \[\
-    (a+b)^n = (a+b)^ne^{(a+b)×0} =f_{a+b}^{(n)}(0) = (f_af_b)^{(n)}(0)\] \[\ = \sum_{k=0}^n\binom{n}{k}f_a^{(k)}(0)f_b^{(n-k)}(0) = \sum_{k=0}^n \binom{n}{k}a^kb^{n-k}
+    (a+b)^n = (a+b)^ne^{(a+b)\times 0} =f_{a+b}^{(n)}(0) = (f_af_b)^{(n)}(0)\] \[\ = \sum_{k=0}^n\binom{n}{k}f_a^{(k)}(0)f_b^{(n-k)}(0) = \sum_{k=0}^n \binom{n}{k}a^kb^{n-k}
     \]
-\paragraph{Exercice 5 (Bézout dans \mn{Z}):}
+}
+\exercice{5 (Bézout dans \mn{Z})}{
 Soient $A,B \in \mn{Z}$ telles que $ det(A) \wedge det(B) = 1$, montrer qu'il
 existe $U,V \in \mn{Z}$ telles que : \[\ AU+BV = I_n\]
-
-\paragraph{Solution :}
-
+}
+{
 C'est direct quand on pense à la formule $MCom(M)^{T}= det(M)I_n$,
 car une relation de Bézout dans $\mathbb{Z}$ permet d'écrire : \[\ 
 \exists u,v \in \mathbb{Z} \quad ACom(A)^{T}u + BCom(B)^Tv = (det(A)u+det(B)v)I_n = I_n
 \]
-\paragraph{Exercice 6*:}
+}
+\exercice{6*}{
 Soit $M \in \mn{C}$, démontrer que $M$ est diagonalisable si et seulement si
 sa classe de simlitude est fermée.
-
-\paragraph{Exercice 7**(Théorème de Maschke):}
+}{
+  $\boxed{\Rightarrow }$ Supposons $M$ diagonalisable,\\ on note $C = \{PMP^{-1} , P \in GL_n(\mathbb{C}) \}$ la classe de similitude de $M$, démontrons qu'elle est fermée. Soit $(M_n)_n \in C^{\mathbb{N}}$ convergente de limite $L \in \mn{C}$.
+Notons $\Pi_M$ le polynome minimal de $M$ et $\chi_{_M}$ son polynome caractéristique. L'applcation $M \mapsto det(XI_n -M) = \chi_{_M}$ étant continue car polynomiale, on a $\chi_{_{M_n}} \rightarrow \chi_{_L}$ or $\forall n \in \mathbb{N} \quad \chi_{_{M_n}} = \chi_{_M}$ donc $\chi_{_M} = \chi_{_L}$. De plus, on a classiquement pour $P \in GL_n(\mathbb{C}) \quad \Pi_M(PMP^{-1}) =  P\Pi_M(M)P^{-1} = 0$. Donc $\forall n\in \mathbb{N} \quad \Pi_M(M_n) = 0$ et par continuitée de $\Pi_M : \mn{C} \to \mn{C}$ comme polynome, $\Pi_M(L) = 0$ or $\Pi_M$ est scindé, à racines simples puisque $M$ est diagonalisable, donc $L$ est aussi diagonalizable. $M$ et $L$ ont le même polynome caractéristique et sont diagonamisables donc semblables a une même matrice diagonale, elles sont donc semblables entre elles et $L \in C$.\\
+$\boxed{\Leftarrow}$ Supposons que la classe de similitude $C$ de $M$ est fermée. On veut démontrer que $M$ est diagonalisable, ce qui équivaut à dire que $C$ contient une matrice diagonale. Il suffit donc de trouver une suite d'éléments de $C$ convergeant vers une matrice diagonale, puisque $C$ est fermée. $M$ est trigonalisable dans $\mathbb{C}$ donc on peut trouver $T \in C$ triangulaire supérieure. Considérons pour $k \in \mathbb{N}^*$ la matrice digonale inversible : $P_k = \left( \begin{matrix}k & 0 & \ldots & 0 \\ 0 & k^2  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & k^n \end{matrix}\right)$ d' inverse $\left( \begin{matrix}\frac{1}{k} & 0 & \ldots & 0 \\ 0 & \frac{1}{k^2}  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & \frac{1}{k^n} \end{matrix}\right)$. La suite $(U_k)_k= (P_kTP_k^{-1})_k$ de $C$ converge vers $diag(t_{1,1},\ldots,t_{n,n})$ où $T =(t_{i,j})_{1\leq i,j \leq n}$.En effet le coefficient d'indice $(i,j)$ de $U_k$ vaut $t_{i,j}k^{i-j}$. Si $i>j$ alors $t_{i,j} =0$, si $i<j\quad k^{i-j} \to 0$ et si $i=j\quad t_{i,j}k^{i-j} \to t_{i,i}.\;\;{\square}$
+}
+\exercice{7**(Théorème de Maschke)}{
 Soit $E$ un espace vectoriel de dimension finie et G un sous groupe fini de 
 $GL(E)$. Démontrer que tout sous espace vectoriel de $E$ stable par tous les éléments de $G$ admet un 
 supplémentaire également stable par tout les élément de $G$.
-
-\paragraph{Exercice 8**:} Démontrer que $GL_n(\mathbb{C})$ est connexe par
+}{
+  Disons d'un sous-espace qu'il est stable par $G$ si il est stable par tous les éléments de $G$.
+Soit $F$ un sous-espace vectoriel de $E$ stable par $G$. On va travailler avec des projecteurs, il est bien de se rendre compte que à un couple de sous espaces supplémentaire on peut toujours faire correspondre un projecteur et vice versa car le noyeau et l'image d'un projecteur sont supplémentaires. Soit donc $p$ un projecteur sur $F$. L'idée pricipale pour construire un supplémentaire stable par $G$ est de chercher à construire un projecteur à partir de $p$ et $G$ ayant aussi $F$ pour image et dont le noyeau est stable par $G$.
+On a déja remarqué dans l'exercice 2 que la somme des éléments d'un sous groupe fini de $GL_n(\mathbb{K})$ divisée par son cardinal est un projecteur, on peut donc s'en inspirer et poser $s = \frac{1}{n} \sum_{g \in G}^n gpg^{-1}$, où $n= card(G)$,
+de cette manière : \[\ s^2 = \frac{1}{n^2} \sum_{g \in G}^n\sum_{h \in G}^n hph^{-1}gpg^{-1} = \frac{1}{n}\sum_{g \in G}^ngpg^{-1} =s \] car $p_{|F} =id_F$ et $F =Im(p)$ est stable par $G$. $s$ est le projecteur recherché, on a $Im(s) = F$ en effet :\\ $\boxed{\subset}$ Cette incluson est claire pusique $F$ est stable par $G$.\\ $\boxed{\supset}$ si $x\in F$  alors $ x = p(x) = \frac{1}{n}\sum_{g \in G}^n gpg^{-1}(x) \in Im(s)$ car $p_{|F} =id_F$.\\
+On a aussi $Ker(s)$ stable par $G$ : soit $x\in Ker(s)$, et $h \in G$ \\
+\[\ s(h(x)) = \frac{1}{n} \sum_{g\in G}^n gpg^{-1}(h(x)) = \frac{1}{n} \sum_{g\in G}^n hh^{-1}gp(h^{-1}g)^{-1}(x) = hs(x) = 0\] car $g \mapsto h^{-1}g$ est une permutation de $G$. Donc $Ker(s)$ est stable par $G$. Finalement comme $ Ker(s) \oplus F = Ker(s) \oplus Im(s) = E,\;\; Ker(s)$ est le supplémentaire recherché.\\ 
+\\ $Remarque :$ Cette preuve est vraie pour tout corp $\mathbb{K}$ tel que $n.1_{\mathbb{K}}\neq 0$ (pour pouvoir diviser par $n$), c'est à dire dont la caractéristique ne divise pas $n$.\\
+\paragraph{Autre solution si $\mathbb{K} =\mathbb{R}$ :} On identifie $E$ et $\mathbb{R}^p$ que l'on munit du produit scalaire canonique $<.,.>$, et on pose le produit scalaire $(.|.)$ sur $E$ définit par : \[\ \forall x,y \in E \quad (x|y) = \sum_{g\in G}^n <g(x),g(y)> 
+\]Et on travaille dans l'espace euclidien $(E,(.|.)) $, encore par la bijection $g\mapsto hg$ pour $h \in G$, on constate que tout les éléments de $G$ conservent le produit scalaire, donc sont autoadjoints et donc $F^{\perp}$ est un supplémentaire de $F$ stable par $G$.
+}
+\exercice{8**}{ Démontrer que $GL_n(\mathbb{C})$ est connexe par
  arcs.
+}{}
 
-\paragraph{Exercice 9**(ENS Lyon 2014):}
+\exercice{9**(ENS Lyon 2014)}{
 
 Determiner une CNS sur $A$ et $B$ dans $\mn{C})$ pour que \[\
 \forall k \in \mathbb{N} \quad tr(A^k) = tr(B^k) \quad (*) \]
-\paragraph{Solution :}
+}
+{
 Pour commencer simplifions le problème et cherchons les matrices $A$ qui vérifient \[\
 \forall k \in \mathbb{N^*}\quad tr(A^k) = 0
 \quad (*) \] C'est classique, on commence par observer que toutes les matrices 
@@ -198,13 +216,12 @@ Il ne reste plus qu'a montrer que les multiplicités des valeurs propres sont le
 \end{pmatrix}
 =\begin{pmatrix}0 \\ 0\\ \vdots \\ 0
 \end{pmatrix}\] On retombe sur une matrice de Vandermonde inversible et on conclut que \[\ \forall i \in \llbracket 1,r \rrbracket \quad a_i= b_i \] ce qui conclut.
+}
 
-
-\paragraph{Exercice 10***(D'après \cite{ulm2019}):}    $\\$
+\exercice{10***(D'après \cite{ulm2019})}{ $\\$
 
 Calculer  \[\ \lim_{x\to\infty}\Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} \]
-
-\paragraph{Solution :}
+}{
 Le $n^{-n}$ peut nous rappeler la fameuse et magnifique identité : 
 \[\ \int_0^1 t^{-t}\,\mathrm{d}t = \sum_{n=1}^\infty n^{-n} \]
 Baptisée ``Sophomore's dream'' ou ``rêve du deuxième année'' ( oui oui, elle est vraie !!)
@@ -222,9 +239,9 @@ Soit  $x \in \mathbb{R}$:
 \end{align*}
 (*) Notons $f_n(t) = \frac{(-xt\ln(t))^n}{n!}$, $\forall n \in \mathbb{N} \quad f_n$ est cpm et intégrable sur [0,1], de plus $\sum f_n$ converge simplement vers $F_x:t\mapsto t^{-xt}$ qui est cpm. Enfin comme $t \in [0,1] \;\; f_n$ est de signe constant, notre calcul à partir de (*) justife donc la convergence de $\sum\int_0^1|f_n|$. L'échange série - intégrale est donc justifié.
 Alors \[\ S(x) := \Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} = \;\; x^{\frac{1}{x}}\Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}} \] D'abord, $x^{\frac{1}{x}} = e^{\frac{\ln(x)}{x}} \to 1$ Puis pour $x \geq 1$ : \[\ \Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}}  = \Biggl(\int_0^1 (t^{-t})^x \mathrm{d}t\Biggr)^{\frac{1}{x}} = \|f\|_{_x} \] Où $f: t \mapsto t^{-t}$. On se rappelle alors de l'exercice affirmant que \[\ \|f\|_{_x} \xrightarrow[x \to \infty]{} \|f\|_{_\infty} = \sup_{t\in [0,1]}|f(t)| \] Avec une rapide étude de $f$ on trouve que sa borne sup vaut $e^{\frac{1}{e}}$. Ainsi, \[\ \lim_{x \to \infty}S(x) = e^{\frac{1}{e}}\quad _{_\square} \] 
+}
 
-
-\paragraph{Exercice 11***(D'après \cite{igor}):}
+\exercice{11***(D'après \cite{igor})}{
 
 Soit (E,d) un espace métrique
  compact et \begin{math} 
@@ -235,7 +252,7 @@ telle que : \\
 \forall x,y \in E\;\;\; d(f(x),f(y)) \geq d(x,y) \;\;\;\;\;\;(*)
 \]\
 Démontrer que f est bijective puis que f est une isométrie.
-\paragraph{Solution :} 
+}{
 Soient\(\ x,y \in E \)\ tels que \(\ 
 f(x) = f(y) \)\ alors $ 0 = d(f(x),f(y)) \geq d(x,y) \geq 0 $
 donc $x= y $, ainsi $f$ est injective.\\
@@ -288,7 +305,7 @@ f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
    \forall n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),f^{u_n}(b_n))+d(f^{u_n}(b_n),l) \;\;\;\;\]\ Dès que $u_n$ est négative, $d(f^{u_n}(b),f^{u_n}(b_n)) \leq d(b,b_n)$ en itérant (**). Mais comme $b_n \rightarrow b$ et $f^{u_n}(b_n) \rightarrow l$ on a directement $f^{u_n}(b) \rightarrow l$ puis $l = l'$. Donc c'est bon, c'était plus simple comme ça !  $ \\ \\ $ On peut donc utiliser cette version du  lemme et conclure que $f^{-\gamma(n)}(x)
    \rightarrow a $.
    Tout se passe exactement pareil pour trouver $y$ et $\psi$ si  on commence par extraire de la suite $(f^{\gamma(n)}(b))_n$. Cela conclut la preuve.
-
+}
 
 
 \printbibliography %Prints bibliography
