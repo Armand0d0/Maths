@@ -29,6 +29,7 @@
 \begin{document}
 
 \maketitle%---------------------------------------------------------------
+\newcommand{\m}[1]{\ensuremath{\mathbb{#1}}}
 
 \newcommand{\mn}[1]{\ensuremath{\mathcal{M}_n(\mathbb{#1})}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
@@ -36,7 +37,7 @@
 \newcommand{\exercice}[3]{
   \fbox{%
 \begin{minipage}{1.0\textwidth}
-  \paragraph{Exercie #1:} #2
+  \paragraph{Exercice #1:} #2
 
 \end{minipage}
 }
@@ -130,8 +131,9 @@ Soit $M \in \mn{C}$, démontrer que $M$ est diagonalisable si et seulement si
 sa classe de simlitude est fermée.
 }{
   $\boxed{\Rightarrow }$ Supposons $M$ diagonalisable,\\ on note $C = \{PMP^{-1} , P \in GL_n(\mathbb{C}) \}$ la classe de similitude de $M$, démontrons qu'elle est fermée. Soit $(M_n)_n \in C^{\mathbb{N}}$ convergente de limite $L \in \mn{C}$.
-Notons $\Pi_M$ le polynome minimal de $M$ et $\chi_{_M}$ son polynome caractéristique. L'applcation $M \mapsto det(XI_n -M) = \chi_{_M}$ étant continue car polynomiale, on a $\chi_{_{M_n}} \rightarrow \chi_{_L}$ or $\forall n \in \mathbb{N} \quad \chi_{_{M_n}} = \chi_{_M}$ donc $\chi_{_M} = \chi_{_L}$. De plus, on a classiquement pour $P \in GL_n(\mathbb{C}) \quad \Pi_M(PMP^{-1}) =  P\Pi_M(M)P^{-1} = 0$. Donc $\forall n\in \mathbb{N} \quad \Pi_M(M_n) = 0$ et par continuitée de $\Pi_M : \mn{C} \to \mn{C}$ comme polynome, $\Pi_M(L) = 0$ or $\Pi_M$ est scindé, à racines simples puisque $M$ est diagonalisable, donc $L$ est aussi diagonalizable. $M$ et $L$ ont le même polynome caractéristique et sont diagonamisables donc semblables a une même matrice diagonale, elles sont donc semblables entre elles et $L \in C$.\\
-$\boxed{\Leftarrow}$ Supposons que la classe de similitude $C$ de $M$ est fermée. On veut démontrer que $M$ est diagonalisable, ce qui équivaut à dire que $C$ contient une matrice diagonale. Il suffit donc de trouver une suite d'éléments de $C$ convergeant vers une matrice diagonale, puisque $C$ est fermée. $M$ est trigonalisable dans $\mathbb{C}$ donc on peut trouver $T \in C$ triangulaire supérieure. Considérons pour $k \in \mathbb{N}^*$ la matrice digonale inversible : $P_k = \left( \begin{matrix}k & 0 & \ldots & 0 \\ 0 & k^2  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & k^n \end{matrix}\right)$ d' inverse $\left( \begin{matrix}\frac{1}{k} & 0 & \ldots & 0 \\ 0 & \frac{1}{k^2}  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & \frac{1}{k^n} \end{matrix}\right)$. La suite $(U_k)_k= (P_kTP_k^{-1})_k$ de $C$ converge vers $diag(t_{1,1},\ldots,t_{n,n})$ où $T =(t_{i,j})_{1\leq i,j \leq n}$.En effet le coefficient d'indice $(i,j)$ de $U_k$ vaut $t_{i,j}k^{i-j}$. Si $i>j$ alors $t_{i,j} =0$, si $i<j\quad k^{i-j} \to 0$ et si $i=j\quad t_{i,j}k^{i-j} \to t_{i,i}.\;\;_{_\square}$
+Notons $\Pi_M$ le polynome minimal de $M$ et $\chi_{_M}$ son polynome caractéristique. L'applcation $M \mapsto det(XI_n -M) = \chi_{_M}$ étant continue car polynomiale, on a $\chi_{_{M_n}} \rightarrow \chi_{_L}$ or $\forall n \in \mathbb{N} \quad \chi_{_{M_n}} = \chi_{_M}$ donc $\chi_{_M} = \chi_{_L}$. De plus, on a classiquement pour $P \in GL_n(\mathbb{C}) \quad \Pi_M(PMP^{-1}) =  P\Pi_M(M)P^{-1} = 0$. Donc $\forall n\in \mathbb{N} \quad \Pi_M(M_n) = 0$ et par continuitée de $\Pi_M : \mn{C} \to \mn{C}$ comme polynome, $\Pi_M(L) = 0$ or $\Pi_M$ est scindé, à racines simples puisque $M$ est diagonalisable, donc $L$ est aussi diagonalisable. $M$ et $L$ ont le même polynome caractéristique et sont diagonalisables donc semblables a une même matrice diagonale, elles sont donc semblables entre elles et $L \in C$.\\
+$\boxed{\Leftarrow}$ Supposons que la classe de similitude $C$ de $M$ est fermée. On veut démontrer que $M$ est diagonalisable, ce qui équivaut à dire que $C$ contient une matrice diagonale. Il suffit donc de trouver une suite d'éléments de $C$ convergeant vers une matrice diagonale, puisque $C$ est fermée. $M$ est trigonalisable dans $\mathbb{C}$ donc on peut trouver $T \in C$ triangulaire supérieure. Considérons pour $k \in \mathbb{N}^*$ la matrice digonale inversible : $P_k = \left( \begin{matrix}k & 0 & \ldots & 0 \\ 0 & k^2  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & k^n \end{matrix}\right)$ d'inverse $\left( \begin{matrix}\frac{1}{k} & 0 & \ldots & 0 \\ 0 & \frac{1}{k^2}  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & \frac{1}{k^n} \end{matrix}\right)$. La suite $(U_k)_k= (P_kTP_k^{-1})_k$ de $C$ converge vers $diag(t_{1,1},\ldots,t_{n,n})$ où $T =(t_{i,j})_{1\leq i,j \leq n}$. En effet le coefficient d'indice $(i,j)$ de $U_k$ vaut $t_{i,j}k^{i-j}$. Si $i>j$ alors $t_{i,j} =0$, si $i<j\quad k^{i-j} \to 0$ et si $i=j\quad t_{i,j}k^{i-j} \to t_{i,i}.\;\;_{_\square}$
+\paragraph{Remarque : } On peut démontrer avec la même méthode que $M$ est nilpotente si et seulement si $0 \in \overline{C}$ (l'adhérence de $C$).
 }
 \exercice{7**(Théorème de Maschke)}{
 Soit $E$ un espace vectoriel de dimension finie et G un sous groupe fini de 
@@ -146,23 +148,33 @@ On a aussi $Ker(s)$ stable par $G$ : soit $x\in Ker(s)$, et $h \in G$ \\
 \[\ s(h(x)) = \frac{1}{n} \sum_{g\in G}^n gpg^{-1}(h(x)) = \frac{1}{n} \sum_{g\in G}^n hh^{-1}gp(h^{-1}g)^{-1}(x) = hs(x) = 0\] car $g \mapsto h^{-1}g$ est une permutation de $G$. Donc $Ker(s)$ est stable par $G$. Finalement comme $ Ker(s) \oplus F = Ker(s) \oplus Im(s) = E,\;\; Ker(s)$ est le supplémentaire recherché.\\ 
 \\ $Remarque :$ Cette preuve est vraie pour tout corp $\mathbb{K}$ tel que $n.1_{\mathbb{K}}\neq 0$ (pour pouvoir diviser par $n$), c'est à dire dont la caractéristique ne divise pas $n$.\\
 \paragraph{Autre solution si $\mathbb{K} =\mathbb{R}$ :} On identifie $E$ et $\mathbb{R}^p$ que l'on munit du produit scalaire canonique $<.,.>$, et on pose le produit scalaire $(.|.)$ sur $E$ définit par : \[\ \forall x,y \in E \quad (x|y) = \sum_{g\in G}^n <g(x),g(y)> 
-\]Et on travaille dans l'espace euclidien $(E,(.|.)) $, encore par la bijection $g\mapsto hg$ pour $h \in G$, on constate que tout les éléments de $G$ conservent le produit scalaire, donc sont autoadjoints et donc $F^{\perp}$ est un supplémentaire de $F$ stable par $G$.
+\] On travaille dans l'espace euclidien $(E,(.|.)) $, encore par la bijection $g\mapsto hg$ pour $h \in G$, on constate que tout les éléments de $G$ conservent le produit scalaire, donc sont autoadjoints et donc $F^{\perp}$ est un supplémentaire de $F$ stable par $G$.
 }
 \exercice{8**}{ Démontrer que $GL_n(\mathbb{C})$ est connexe par
  arcs.
-}{}
+}{ Soit $A \in GL_n(\mathbb{C})$
+On va exhiber une application continue $\phi : \left[ 0,1 \right] \to GL_n(\mathbb{C})$ telle que $\phi(0) = I_n$ et $\phi(1) = A$ 
+
+Regardons pour commencer le chemin en ligne droite : $\psi_A(t) = tA + (1-t)I_n$ il n'a pas de raison de rester dans $GL_n(\mathbb{C})$ mais pour \[\ t \in \left] 0,1\right] \quad \psi_A(t) \in GL_n(\mathbb{C})\quad \Leftrightarrow \quad A + \frac{1-t}{t}I_n \in GL_n(\mathbb{C}) \Leftrightarrow \frac{1-t}{t} \notin Sp(A) \] Il suffit donc que $A$ n'ait aucune valeur propre réelle pour que ce chemin $\psi_A$ soit à valeurs dans $GL_n(\mathbb{C})$. Que faire si ce n'est pas le cas ? Trouver un chemin continu de $A$ à une matrice dont les valeurs propres ne sont pas réelles. Posons \[\  
+r:\left\{ \begin{matrix}
+ \left[0,1\right] &
+  \longrightarrow & GL_n(\mathbb{C}) \\  t & \longmapsto &  e^{2i\pi t}A \end{matrix} \right. \] 
+Si $Sp(A) = \{\lambda_1,\ldots,\lambda_n \}$ alors $Sp(r(t)) = \{e^{2i\pi t}\lambda_1,\ldots,e^{2i\pi t}\lambda_n\}$.\\ Puisque   l'ensemble $\{ t\in \left[ 0,1\right] | \exists k \in \llbracket 1,n \rrbracket \quad e^{2i\pi t}\lambda_k \in \mathbb{R}\}$ 
+est fini on peut trouver  $t_0\in \left[0,1\right]$ 
+tel que $Sp(r(t_0)) \subset \mathbb{C}\setminus \mathbb{R}$. Notons $B = r(t_0) $. La restriction de $r$ à $ \left[0,t_0\right]$ est donc un chemin continu à valeurs dans $GL_n(\mathbb{C})$ joignant $A$ et $B$, de même $\psi_B$ continu à valeurs dans $GL_n(\mathbb{C})$ joint $B$ et $I_n$, on construit donc facilement $\phi $ comme il faut.}
+%------------------------------------------------------------------------------------------------------------------------------------------------
 
 \exercice{9**(ENS Lyon 2014)}{
 
-Determiner une CNS sur $A$ et $B$ dans $\mn{C})$ pour que \[\
+Determiner une CNS sur $A$ et $B$ dans $\mn{C}$ pour que \[\
 \forall k \in \mathbb{N} \quad tr(A^k) = tr(B^k) \quad (*) \]
 }
 {
 Pour commencer simplifions le problème et cherchons les matrices $A$ qui vérifient \[\
 \forall k \in \mathbb{N^*}\quad tr(A^k) = 0
-\quad (*) \] C'est classique, on commence par observer que toutes les matrices 
+\quad (**) \] C'est classique, on commence par observer que toutes les matrices 
 nilpotentes fonctionnent, puis on montre que ce sont les seules :
- démontrons que si $A \in \mn{C}) $ verifie $(*)$ alors son
+ démontrons que si $A \in \mn{C}) $ verifie $(**)$ alors son
   spectre est réduit à \{0\}. Notons $ \lambda_1,..., \lambda_r$ les valeurs propres non nulles de $A$ où les $\lambda_i$ sont distinct 2 à 2, $n_i \geq 1$ la multiplicité de $\lambda_i$ et $n_0 \geq 0$ la multiplicité de 0. On raisonne par l'absurde en supposant $r \geq 1$,
 $(**)$ pour $k\in \llbracket 0, r \rrbracket $ donne : 
 \begin{alignat*}{6}
@@ -217,6 +229,111 @@ Il ne reste plus qu'a montrer que les multiplicités des valeurs propres sont le
 =\begin{pmatrix}0 \\ 0\\ \vdots \\ 0
 \end{pmatrix}\] On retombe sur une matrice de Vandermonde inversible et on conclut que \[\ \forall i \in \llbracket 1,r \rrbracket \quad a_i= b_i \] ce qui conclut.
 }
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+\exercice{10 (Cassini)}{Soit $g\in \mathcal{C}^0(\left[ a, b\right],\mathbb{R})$. On pose $f_0 = g$ et \[\ \forall n \in \mathbb{N} \quad f_{n+1} = \int_af_n \] Étudier la convergence de la série de fonctions : \[\ \sum_{n\geq 0}f_n \] et calculer sa somme.
+
+}{
+%solution_____
+Remarquons que $\forall n \in \mathbb{N} \quad f_n$ est de classe $ \mathcal{C}^n$ et $f_n^{(k)}  = f_{n-k}$ et si $n \neq 0$ $ f_n(a)=0$.
+$g$ est bornée sur le segment $\left[ a,b\right]$ car elle y est continue notons $M$ une borne de $g$. Soit $x\in \left[ a,b\right]$ le théorème de Taylor-Lagrange appliqué à $f_n$ entre $a$ et $x$ s'écrit :
+\[\ \Bigg|f_n(x)-\sum_{k=0}^{n-1}\frac{f_n^{(k)}(a)}{k!}(x-a)^k\Bigg|\leq \frac{M(x-a)^n}{n!} \]\[\ |f_n(x)|\leq \frac{M(b-a)^n}{n!}\] Par passage au $sup$
+ on déduit que la série de terme général $\|f_n\|_{\infty} $ converge. Donc $\sum_{n\geq 0}f_n$ converge normalement donc uniformément sur $ \left[ a,b\right]$.\\
+Calculons maintenant sa somme, que l'on note $s$ :\\
+Soit $x \in \left[ a,b\right]$ : 
+\[\ \int_a^xs(t)dt = \int_a^x\sum_{n=0}^{\infty}f_n(t)dt\]
+
+La convergence uniforme nous autorise ici à échanger série et intégrale :
+
+\begin{align*} \int_a^xs(t)dt &=  \sum_{n=0}^{\infty}\int_a^xf_n(t)dt \\ &= \sum_{n= 0}^{\infty}f_{n+1}(x) \\ &= s(x) -g(x) \\ \text{Notons } S(x) &= \int_a^xs(t)dt. \end{align*}
+
+Alors $S' - S = g$, équation différentielle facile à résoudre, on obtient avec la condition $S(a) =0$ que  : \[\ S(x) = e^{x}\int_a^xg(t)e^{-t}dt \] et 
+\[\ s(x) = g(x) + e^{x}\int_a^xg(t)e^{-t}dt  \]}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+\exercice{11}{
+Soit $A\subset \mathbb{C}$, exhiber un $\mathbb{K}$-espace vectoriel pour  $\mathbb{K} = \mathbb{R}$ ou $\mathbb{C}$ et $f\in L(E)$ tel que $Sp(f) = A$.
+% Create a new 1st level heading
+}{
+Considérons $E = \mathcal{C}^{\infty}(\mathbb{R},\mathbb{C})$ et $D:f\mapsto f'$ l'endomorphisme de dérivation sur $E$, puis pour
+ $\lambda \in \mathbb{C}\quad f_{\lambda}:x\mapsto e^{\lambda x}$.\\On pose $F = Vect_{\mathbb{C}}\Big((f_{\lambda})_{\lambda \in A}\Big)= 
+ Vect_{\mathbb{R}}\Big((f_{\lambda})_{\lambda \in A}, (if_{\lambda})_{\lambda \in A} \Big)$ qui est dans tous les cas un sous espace vectoriel de $E$ vu comme $\mathbb{K}$-espace vectoriel, la suite de la preuve est similaire  que $\mathbb{K}$ soit $ \mathbb{R}$ ou $\mathbb{C}$ : \\
+
+On constate que $F$ est stable par $D$, notons $d = D_{|F} \in L(F)$ : \[\ \forall \lambda \in A\quad d(f_{\lambda}) = \lambda f_{\lambda}\]
+Et comme les $f_{\lambda}$ sont tous non nuls, $A \subset Sp(d)$.
+Soit maintenant $\lambda \in Sp(d)$, \[\ \exists f \in F \quad f' = \lambda f \] On peut résoudre cette équation différentielle, 
+et on obtient \[\ \exists K \in \mathbb{C}\quad \forall x \in \mathbb{R}\quad f(x) = Ke^{\lambda x} \] On a aussi $f \in F$, et la famille 
+$(f_{\lambda})_{\lambda \in \mathbb{C}}$ est $\mathbb{K}$-libre, donc nécessairement $f = Kf_{\lambda}$ avec $\lambda \in A$. Ainsi $A = Sp(d)$.
+}
+\exercice{12 (Théorème de Burnside)}{
+  On dit qu'un groupe $G$ est d'exposant fini si : \[\ \exists N \in \m{N}^* \quad \forall g \in G  \quad g^N = 1\] Le plus petit entier $N$   vérifiant cela est alors appelé l'exposant de $G$, c'est aussi le plus petit multiple commun des ordres des éléments de $G$.\\ \\ Démontrer qu'un sous groupe de $GL_n(\m{C})$ est d'exposant fini si et seulement si il est fini.
+}{
+  Il est clair que si $G$ est fini $\forall g \in G \quad g^{|G|} =1$ donc $G$ est d'exposant fini. 
+  Réciproquement supposons $G$ d'exposant fini, on va montrer que $G$ est fini en construisant une injection de $G$ dans un ensemble fini. Soit $B = (B_1,\ldots,B_r)$ une famille libre de $G$ de cardinal maximal, on vérifie facilement que c'est une base de $Vect(G)$.\\
+  Posons $ f: \left\{ \begin{array}{rcl} Vect(G) & \longrightarrow & \m{C}^r \\ A & \longmapsto & (Tr(AB_1),\ldots,Tr(AB_r)) \\ \end{array} \right. 
+  $ $f$ est linéaire, montrons que $f_{|G}$ est injective: On vérifie facilement qu'il suffit pour ça de montrer que $Ker(f)\cap G =\{0\}$.  Soit $A \in Ker(f)\cap G$ et $k \in \m{N}$, on peut decomposer $A^k$ dans la base $B$, notons : \[\ A^k = \sum_{i=1}^r a_iB_i \] \[\ Tr(A^{k+1}) = \sum_{i=1}^r a_iTr(AB_i) = 0 \] Car $A \in Ker(f)$ donc \[\ \forall k \in \m{N}^*\quad Tr(A^k) = 0 \]
+  Cela implique que $A$ est nilpotente (exercice classique, voir exo 9). Or le ploynome scindé à racines simples $X^N-1$ annule $A$ puisque $A \in G$, donc $A$ est diagonalisable et nilpotente, elle est donc nulle.
+  $f_{|G}$ est donc injective.\\ Pour conclure montrons que $f(G)$ est fini. Déja $f(G) \subset E^r$ où\\ $E = \{Tr(A), A \in G\}$.
+   Il suffit donc de montrer que $E$ est fini, et en effet si $A \in G$, les valeurs propres de $A$ sont des racines de $X^N-1$ qui sont en nombres fini, 
+   la trace de $A$ est la somme de ses valeurs propres, donc peut également prendre un nombre fini de valeurs, ainsi $E$ est fini.
+}
+\exercice{13}{
+  Déterminer les endomorphismes de groupe continus de $ (\m{R}^*_+,\times)$.
+}{
+  Soit $f$ un tel morphisme,
+  posons $g = \mathrm{ln}\circ f\circ \mathrm{exp}$. On a \begin{align*}\forall x,y \in \m{R} \quad g(x+y) =&\; \mathrm{ln}(f(e^{x+y})) \\ =&\; 
+    \mathrm{ln}(f(e^xe^y)) \\ =&\; \mathrm{ln}(f(e^x)f(e^y))\\ =&\; \mathrm{ln}(f(e^x)) + \mathrm{ln}(f(e^y)) \\ =& \; g(x) + g(y) \end{align*}
+    L'application $g$ est continue comme composée, et additive, donc linéaire (c'est un exercice classique), donc il existe $a \in \m{R} $ tel que :
+    \begin{align*}\forall x \in \m{R} \quad g(x) &= ax\\ \mathrm{ln}(f(e^x)) &= ax\\ f(e^x) &= e^{ax} \quad \text{par surjectivité de exp } 
+      \forall y \in \m{R}  \quad \exists x \in \m{R}^{*}_+ \quad y = e^x \\ \text{donc } \forall y \in \m{R}^{*}_+\quad f(y) &= y^a \end{align*}
+
+    Réciproquement, les fonctions de la forme $x\mapsto x^a$ avec $a \in \m{R}$ sont bien des endomorphismes continus de $(\m{R}^*_+,\times)$.
+      \paragraph{Autre Solution :}
+      Soit $f$ un tel morphisme, il vérifie : \[\ \forall x,y \in \m{R}^{*}_+ \quad f(xy) = f(x)f(y)\quad\quad  (1) \]
+      En particulier $f(1)^2 = f(1)$ donc $f(1) \in \{0,1\}\cap \m{R}^{*}_+ $ donc $f(1) = 1$.
+      On va chercher une équation différentielle vérifiée par $f$, pour montrer qu'elle est dérivable, intégrons (1) (bonne idée paradoxale) :
+      puisque $f$ est continue et strictement positive : \[\ C := \int^2_1f(y)dy >0  \]
+      puis, soit $ x\in \m{R}^{*}_+ $ :  \begin{align*}\int_1^2 f(xy)dy =&\; \int_1^2 f(x)f(y) dy \\
+      \int_x^{2 x} f(u) \frac{du}{x} =&\; f(x)\int_1^2 f(y) dy\quad  \text{ avec le changement de variables } u = xy \\
+       \text{d'où } f(x) =&\; \frac{1}{xC}\int_x^{2x}f(u) du
+      \end{align*}
+      $f$ est donc de classe $\mathcal{C}^1$ sur $\m{R}^*_+$.
+      On peut donc maintenant dériver (1) par rapport à $x$ :
+      \[\ \forall x,y \in \m{R}^*_+ \quad   yf'(xy) = f'(x)f(y) \]
+      et en $x=1$ :
+       \[\ \forall y \in \m{R}^*_+ \quad yf'(y) = f'(1)f(y) \] 
+      En résolvant cette équation différentielle on obtient : \[\ \exists K \in \m{R} \quad \forall x \in \m{R}^*_+ \quad f(x) = Kx^{f'(1)}\]
+      puis en évaluant en 1 il vient $K = 1$. Enfin on conclut car toutes les fonctions $x \mapsto x^a$ où $a \in \m{R}$ conviennent.
+
+}
+\exercice{14}{
+Soit $ R >0 $ et $A$ une partie de la sphère de rayon R, que l'on note $ \\ \mathcal{S}(0,R) =\{z \in \m{C} \;\;|\;\; |z| = R \}$. 
+Existe-t-il une série entiere $f:z\mapsto \sum_{n=0}^{\infty}a_nz^n$ de rayon de convergence $R$ tel que l'ensemble des points de $\mathcal{S}(0,R)$ en lesquels $f$ est bien définie (i.e la série converge) soit exactement $A$ ?
+}{
+
+On va démontrer que le résultat est faux en général par arguments de cardinalité : \\Soit $R>0$, pour une série entiere $f$ notons $C(f)$ l'ensemble des points de $\mathcal{S}(0,R)$ où $f$ converge. On raisonne par l'absurde en supposant que le résultat est vrai : pour tout  $A \subset \mathcal{S}(0,R)$ il existe une série entiere $f$ de rayon $R$ telle que $C(f) = A$.
+On va commencer par démontrer le résultat suivant : 
+\paragraph{Lemme :}
+Si $(a_n)n$ est une suite de complexes, il existe une suite $(q_n)_n$ de $\m{Q}\left[i\right]$ telle que
+ \[\ \forall z \in \m{C}\quad \Bigg(\sum_{n\geq 0}a_nz^n \;\text{ converge } \Leftrightarrow \quad \sum_{n\geq 0} q_nz^n \;\text{ converge}\Bigg)\]
+\paragraph{Preuve :}
+Soit $(a_n)n \in \m{C}^{\m{N}}$, par densité de $\m{Q}\left[i\right]$ dans $\m{C}$ :
+ \[\ \forall n\in \m{N}\quad   \exists q_n \in \mathcal{B}(a_n,\frac{1}{n!})\cap \m{Q}\left[i\right] \] 
+ Si on note $\varepsilon_n = q_n-a_n$ alors $\forall n\in \m{N} \quad   q_n = a_n + \varepsilon_n$ et $ |\varepsilon_n| \leq \frac{1}{n!} $,
+  donc la série entiere $\sum_{n\geq 0}\varepsilon_nz^n$ a un rayon de convergence infini, de plus : \[\ \forall z \in \m{C} \quad \sum_{n\geq 0} q_nz^n =\sum_{n\geq 0} a_nz^n +\sum_{n\geq 0} \varepsilon_nz^n\] On a donc bien le résultat voulu puisque le terme le plus à droite converge toujours.\; ${\square}$\\
+Pour $u = (u_n)_n$ une suite complexe, on note $f_u:z\mapsto \sum_{n = 0}^{\infty}u_nz^n$.
+Notre hypothèse implique d'après ce lemme que \[\ \forall A \subset \mathcal{S}(0,R) \quad \exists q \in \m{Q}\left[i\right]^{\m{N}} \text{ tel que }  
+f_q \text{ soit de rayon $R$ et } C(f_q) = A \]
+ Donc l'application $ \varphi : \left\{\begin{matrix} \m{Q}\left[i\right]^{\m{N}} &\to & \mathcal{P(S(}0,R)) \\ q &\mapsto & C(f_q) \end{matrix} \right. \;\;$
+  est surjective. Or on peut montrer avec une bijection de $\m{N}$ dans $\m{Q}$ et l'équipotence de $\m{Q}\left[i\right] $ 
+  et $\m{Q}$ que $\m{Q}\left[i\right]^{\m{N}}$ est en bijection avec $\m{N}^{\m{N}}$. De plus $\m{R}$ est en bijection avec 
+  $\m{N}^{\m{N}}$, exhibons une surjection, (c'est suffisant pour notre preuve) : à un réel $x$ dont une écriture en base 11 est une suite $(x_n)_n$
+   à valeurs dans $\{0,\ldots ,9,A\} $ on associe, si $(x_n)_n$ possède deux $A$ consécutifs ou un nombre fini de $A$, la suite nulle et sinon la suite 
+   $(a_n)_n$ definit par : $\forall n \in \m{N}\quad a_n $ est l'entier dont l'écriture décimale est $x_{i_n +1} \ldots x_{i_{n+1}-1}$ où $i_n$ désigne le rang du $n$-ième A dans $(x_n)_n $. Cette application est facilement surjective, par composition, on dispose donc d'une surjection de $\m{R}$ dans $\mathcal{P(S}(0,R))$. Or $\psi :\left\{\begin{matrix} \left[0,1\right[ & \to & \mathcal{S}(0,R) \\ t &\mapsto & Re^{2i\pi t}\end{matrix}\right. $ est bijective et donc démontre, connaissant l'équipotence de $\left[0,1\right[$ et $\m{R}$, que $S(0,R)$ est en bijection avec $\m{R}$, il vient ensuite que $\mathcal{P(S}(0,R))$ est en bijection avec $\mathcal{P}(\m{R})$. On a donc grace à tout ce qui précède, une surjection de $\m{R}$ dans $\mathcal{P}(\m{R})$ ce qui est absurde d'après le théorème de Cantor.
+
+}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------------------------------
 
 \exercice{10***(D'après \cite{ulm2019})}{ $\\$
 

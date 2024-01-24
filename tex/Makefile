@@ -1,10 +1,16 @@
 EXE ?= pdflatex
 SHELL=/bin/bash
 
+
 all: 
 	biber main
 	$(EXE) main.tex
 	cp main.pdf ../Exos_sympas.pdf
+
+nolib: 
+	$(EXE) main.tex
+	cp main.pdf ../Exos_sympas.pdf
+
 	
 push:
 	git add ..
