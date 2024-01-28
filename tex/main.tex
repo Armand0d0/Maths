@@ -30,9 +30,13 @@
 
 \maketitle%---------------------------------------------------------------
 \newcommand{\m}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\tx}[1]{\ensuremath{\mathrm{#1}}}
 
 \newcommand{\mn}[1]{\ensuremath{\mathcal{M}_n(\mathbb{#1})}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\car}[1]{\ensuremath{\chi_{_{#1}}}}
+\newcommand{\n}[1]{\ensuremath{\|#1\|}}
+\newcommand{\gln}[1]{\ensuremath{GL_n(\mathbb{#1})}}
 \setlength\parindent{0pt}
 \newcommand{\exercice}[3]{
   \fbox{%
@@ -43,7 +47,7 @@
 }
   \paragraph{Solution :} #3 $ \\ \\ \\$
 }%-------------------------------------------------------------------------------------
-\exercice{1*}{
+\exercice{1}{
 Soit $(G,.)$ un groupe fini dont tous les élément sont d'ordre 2, montrer que son
 cardinal est une puissance de 2.}
 {On propose 2 solution, la première très astucieuse et jolie et la deuxième plus accessible et généralisable.
@@ -79,20 +83,21 @@ si $x,y \in H$ alors $xy^{-1} \in H \subset H\cup aH$\\si $x,y\in aH\quad \exist
 \leftskip 0pt
 Alors $H\cup aH = G$ par maximalité de $H$. Soit $x\in H \cap aH \quad \exists h,h' \in H \quad h' = ah$ absurde car alors $a= h'h^{-1} \in H$. Ainsi $H\cap aH=\emptyset$. En vertue de la bijection $x \mapsto ax,\quad card(H) =card(aH)$. On déduit de ces 3 points que $card(G) = 2card(H)$, donc $card(H) \leq 2^k$ et par l'hypothèse de récurrence $\exists p \in \mathbb{N} \quad card(H) = 2^p$ puis $card(G) = 2^{p+1}$.
 }
-\exercice{2*(d'après \cite{igor})}%---------------------------------------------------------------
+\exercice{2 (d'après \cite{igor})}%---------------------------------------------------------------
 {
   Soit $\mathbb{K}$ un corps et $A_1, \ldots,A_p$ un ensemble de $p$ matrices de $GL_n(\mathbb{K})$ stable
-par produit, montrer que \[\ tr\Biggl(\sum_{i=1}^p A_i\Biggr) \equiv 0\left[p\right] \]
+par produit, montrer que \[\ \tx{Tr}\Biggl(\sum_{i=1}^p A_i\Biggr) \equiv 0\left[p\right] \]
 }
 {
   Notons $G$ cet ensemble et $S = \sum_{i=1}^pA_i$, il faut remarquer que si $j \in \llbracket 1 , p \rrbracket$ 
 \[\ \sum_{i=1}^pA_jA_i = \sum_{i=1}^pA_i = S \text{ car } M \mapsto A_jM \text{ est une permutation de } G \] \[\ \text{Alors, }
 S^2 = \Biggl(\sum_{i=1}^pA_i\Biggr)^2 =  \sum_{i=1}^p\sum_{j=1}^pA_iA_j = p\sum_{i=1}^pA_i = pS
-\]  \[\ \text{Mais alors, }\Bigl(\frac{S}{p}\Bigr)^2 = \frac{pS}{p^2} = \frac{S}{p} \] $\frac{S}{p}$ est donc un projecteur,  sa trace est donc égale à son rang, c'est donc un entier et par linéarité, la trace de S est divisible par $p$. 
+\] Si la caractéristique de $\m{K}$ divise $p$ (c'est à dire si $p.1_{\m{K}} = 0_{\m{K}}$) alors $S^2=0$, $S$ est donc nilpotente et sa trace est nulle.
+On a bien $\tx{Tr}(S) \equiv 0 \left[p\right] $.   \[\ \text{Sinon : }\Bigl(\frac{S}{p}\Bigr)^2 = \frac{pS}{p^2} = \frac{S}{p} \] $\frac{S}{p}$ est donc un projecteur,  sa trace est donc égale à son rang, c'est donc un entier et par linéarité, la trace de S est divisible par $p$. 
 
 }
 
-\exercice{3*}{
+\exercice{3}{
 Soient $a,b\in \mathbb{R},\;\; a<b$ et $f:\left[a,b\right] \to \mathbb{R}$ continue 
 sur $\left[a,b\right]$, dérivable sur $\left]a,b\right[$ nulle en $a$ et $b$.
  Soit $\lambda \in \mathbb{R}$.
@@ -126,7 +131,7 @@ car une relation de Bézout dans $\mathbb{Z}$ permet d'écrire : \[\
 \exists u,v \in \mathbb{Z} \quad ACom(A)^{T}u + BCom(B)^Tv = (det(A)u+det(B)v)I_n = I_n
 \]
 }
-\exercice{6*}{
+\exercice{6}{
 Soit $M \in \mn{C}$, démontrer que $M$ est diagonalisable si et seulement si
 sa classe de simlitude est fermée.
 }{
@@ -135,7 +140,7 @@ Notons $\Pi_M$ le polynome minimal de $M$ et $\chi_{_M}$ son polynome caractéri
 $\boxed{\Leftarrow}$ Supposons que la classe de similitude $C$ de $M$ est fermée. On veut démontrer que $M$ est diagonalisable, ce qui équivaut à dire que $C$ contient une matrice diagonale. Il suffit donc de trouver une suite d'éléments de $C$ convergeant vers une matrice diagonale, puisque $C$ est fermée. $M$ est trigonalisable dans $\mathbb{C}$ donc on peut trouver $T \in C$ triangulaire supérieure. Considérons pour $k \in \mathbb{N}^*$ la matrice digonale inversible : $P_k = \left( \begin{matrix}k & 0 & \ldots & 0 \\ 0 & k^2  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & k^n \end{matrix}\right)$ d'inverse $\left( \begin{matrix}\frac{1}{k} & 0 & \ldots & 0 \\ 0 & \frac{1}{k^2}  & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0& \ldots & \frac{1}{k^n} \end{matrix}\right)$. La suite $(U_k)_k= (P_kTP_k^{-1})_k$ de $C$ converge vers $diag(t_{1,1},\ldots,t_{n,n})$ où $T =(t_{i,j})_{1\leq i,j \leq n}$. En effet le coefficient d'indice $(i,j)$ de $U_k$ vaut $t_{i,j}k^{i-j}$. Si $i>j$ alors $t_{i,j} =0$, si $i<j\quad k^{i-j} \to 0$ et si $i=j\quad t_{i,j}k^{i-j} \to t_{i,i}.\;\;_{_\square}$
 \paragraph{Remarque : } On peut démontrer avec la même méthode que $M$ est nilpotente si et seulement si $0 \in \overline{C}$ (l'adhérence de $C$).
 }
-\exercice{7**(Théorème de Maschke)}{
+\exercice{7 (Théorème de Maschke)}{
 Soit $E$ un espace vectoriel de dimension finie et G un sous groupe fini de 
 $GL(E)$. Démontrer que tout sous espace vectoriel de $E$ stable par tous les éléments de $G$ admet un 
 supplémentaire également stable par tout les élément de $G$.
@@ -146,11 +151,11 @@ On a déja remarqué dans l'exercice 2 que la somme des éléments d'un sous gro
 de cette manière : \[\ s^2 = \frac{1}{n^2} \sum_{g \in G}^n\sum_{h \in G}^n hph^{-1}gpg^{-1} = \frac{1}{n}\sum_{g \in G}^ngpg^{-1} =s \] car $p_{|F} =id_F$ et $F =Im(p)$ est stable par $G$. $s$ est le projecteur recherché, on a $Im(s) = F$ en effet :\\ $\boxed{\subset}$ Cette incluson est claire pusique $F$ est stable par $G$.\\ $\boxed{\supset}$ si $x\in F$  alors $ x = p(x) = \frac{1}{n}\sum_{g \in G}^n gpg^{-1}(x) \in Im(s)$ car $p_{|F} =id_F$.\\
 On a aussi $Ker(s)$ stable par $G$ : soit $x\in Ker(s)$, et $h \in G$ \\
 \[\ s(h(x)) = \frac{1}{n} \sum_{g\in G}^n gpg^{-1}(h(x)) = \frac{1}{n} \sum_{g\in G}^n hh^{-1}gp(h^{-1}g)^{-1}(x) = hs(x) = 0\] car $g \mapsto h^{-1}g$ est une permutation de $G$. Donc $Ker(s)$ est stable par $G$. Finalement comme $ Ker(s) \oplus F = Ker(s) \oplus Im(s) = E,\;\; Ker(s)$ est le supplémentaire recherché.\\ 
-\\ $Remarque :$ Cette preuve est vraie pour tout corp $\mathbb{K}$ tel que $n.1_{\mathbb{K}}\neq 0$ (pour pouvoir diviser par $n$), c'est à dire dont la caractéristique ne divise pas $n$.\\
+\\ $Remarque :$ Cette preuve est vraie pour tout corps $\mathbb{K}$ tel que $n.1_{\mathbb{K}}\neq 0$ (pour pouvoir diviser par $n$), c'est à dire dont la caractéristique ne divise pas $n$.\\
 \paragraph{Autre solution si $\mathbb{K} =\mathbb{R}$ :} On identifie $E$ et $\mathbb{R}^p$ que l'on munit du produit scalaire canonique $<.,.>$, et on pose le produit scalaire $(.|.)$ sur $E$ définit par : \[\ \forall x,y \in E \quad (x|y) = \sum_{g\in G}^n <g(x),g(y)> 
 \] On travaille dans l'espace euclidien $(E,(.|.)) $, encore par la bijection $g\mapsto hg$ pour $h \in G$, on constate que tout les éléments de $G$ conservent le produit scalaire, donc sont autoadjoints et donc $F^{\perp}$ est un supplémentaire de $F$ stable par $G$.
 }
-\exercice{8**}{ Démontrer que $GL_n(\mathbb{C})$ est connexe par
+\exercice{8}{ Démontrer que $GL_n(\mathbb{C})$ est connexe par
  arcs.
 }{ Soit $A \in GL_n(\mathbb{C})$
 On va exhiber une application continue $\phi : \left[ 0,1 \right] \to GL_n(\mathbb{C})$ telle que $\phi(0) = I_n$ et $\phi(1) = A$ 
@@ -164,7 +169,7 @@ est fini on peut trouver  $t_0\in \left[0,1\right]$
 tel que $Sp(r(t_0)) \subset \mathbb{C}\setminus \mathbb{R}$. Notons $B = r(t_0) $. La restriction de $r$ à $ \left[0,t_0\right]$ est donc un chemin continu à valeurs dans $GL_n(\mathbb{C})$ joignant $A$ et $B$, de même $\psi_B$ continu à valeurs dans $GL_n(\mathbb{C})$ joint $B$ et $I_n$, on construit donc facilement $\phi $ comme il faut.}
 %------------------------------------------------------------------------------------------------------------------------------------------------
 
-\exercice{9**(ENS Lyon 2014)}{
+\exercice{9 (ENS Lyon 2014)}{
 
 Determiner une CNS sur $A$ et $B$ dans $\mn{C}$ pour que \[\
 \forall k \in \mathbb{N} \quad tr(A^k) = tr(B^k) \quad (*) \]
@@ -335,7 +340,7 @@ f_q \text{ soit de rayon $R$ et } C(f_q) = A \]
 %------------------------------------------------------------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------------------------
 
-\exercice{10***(D'après \cite{ulm2019})}{ $\\$
+\exercice{15 (D'après \cite{ulm2019})}{ $\\$
 
 Calculer  \[\ \lim_{x\to\infty}\Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} \]
 }{
@@ -358,7 +363,7 @@ Soit  $x \in \mathbb{R}$:
 Alors \[\ S(x) := \Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} = \;\; x^{\frac{1}{x}}\Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}} \] D'abord, $x^{\frac{1}{x}} = e^{\frac{\ln(x)}{x}} \to 1$ Puis pour $x \geq 1$ : \[\ \Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}}  = \Biggl(\int_0^1 (t^{-t})^x \mathrm{d}t\Biggr)^{\frac{1}{x}} = \|f\|_{_x} \] Où $f: t \mapsto t^{-t}$. On se rappelle alors de l'exercice affirmant que \[\ \|f\|_{_x} \xrightarrow[x \to \infty]{} \|f\|_{_\infty} = \sup_{t\in [0,1]}|f(t)| \] Avec une rapide étude de $f$ on trouve que sa borne sup vaut $e^{\frac{1}{e}}$. Ainsi, \[\ \lim_{x \to \infty}S(x) = e^{\frac{1}{e}}\quad _{_\square} \] 
 }
 
-\exercice{11***(D'après \cite{igor})}{
+\exercice{16 (D'après \cite{igor})}{
 
 Soit (E,d) un espace métrique
  compact et \begin{math} 
@@ -422,6 +427,33 @@ f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
    \forall n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),f^{u_n}(b_n))+d(f^{u_n}(b_n),l) \;\;\;\;\]\ Dès que $u_n$ est négative, $d(f^{u_n}(b),f^{u_n}(b_n)) \leq d(b,b_n)$ en itérant (**). Mais comme $b_n \rightarrow b$ et $f^{u_n}(b_n) \rightarrow l$ on a directement $f^{u_n}(b) \rightarrow l$ puis $l = l'$. Donc c'est bon, c'était plus simple comme ça !  $ \\ \\ $ On peut donc utiliser cette version du  lemme et conclure que $f^{-\gamma(n)}(x)
    \rightarrow a $.
    Tout se passe exactement pareil pour trouver $y$ et $\psi$ si  on commence par extraire de la suite $(f^{\gamma(n)}(b))_n$. Cela conclut la preuve.
+}
+
+\exercice{17 (Preuve topologique de Cayley-Hamilton)}{
+
+Soit $A\in \mn{C}$,\\
+1) Démontrer que si $A$ est diagonalisable, alors $\chi_{_A}(A) =0$.\\
+2) En déduire que $\chi_{_A}(A)=0$.
+}
+{
+1) On note $A= PDP^{-1}$ où $D$ est diagonale, P inversible.
+On a facimement $\chi_{_A}(A) = \chi_{_D}(A) = \chi_{_D}(D)$. 
+Mais cette matrice est diagonale, et s'écrit $\prod_{i=1}^n(D-\lambda_i I_n)$. Où $Sp(A) = \{ \lambda _1,\ldots ,\lambda _n\}$. Et comme les coefficients diagonaux de $D$ sont aussi les valeurs propres de $A$, on peut voir que ce produit de matrices diagonales est nul.\\
+2) On va conclure par densité des matrices diagonalisables dans $\mn{C}$ : on dispose d'une suite $(A_n)_n$ de matrices diagonalisables qui tends vers $A$. Cela ne dépend pas des normes, en dimension finie. Il suffit d'après 1) de montrer que $\chi_{_{A_n}}(A_n) \to \car{A}(A)$ car il s'agirait alors de la limite de la suite nulle.
+L'application $f:M \mapsto \car{M}$ est continue puisque $ \car{M} = \mathrm{det}(XI_n-M)$ et le déterminant est polynomial en les coefficients de la matrice. Choisissons des normes qui nous arrangent : la norme infinie sur $\mn{C}$, on note $B = \mathcal{B}_f(A,1)$ et on pose pour $P\in \m{C}_n\left[X\right] \quad \|P\| := \mathrm{sup}_{M\in B}\|P(M)\|_{\infty}$. Le sup est bien définit car $P$ est continue sur le compact $B$ donc majorée. Montrons qu'on définit ainsi une norme : \\ 
+Soient $P,Q \in \m{C}_n\left[X\right],\; \lambda \in \m{C}, $\\
+$\bullet $ Homgénéité : $\|\lambda P\| = \mathrm{sup}_{M\in B}\|\lambda P(M)\|_{\infty}= \mathrm{sup}_{M\in B}|\lambda| \| P(M)\|_{\infty}= |\lambda|\n{P}$.\\
+$\bullet$ Inégalité triangulaire :
+$\forall M\in B \quad \n{P(M)+Q(M)}_{\infty}\leq \n{P(M)}_{\infty}+\n{Q(M)}_{\infty} \leq \n{P} + \n{Q} $ par passage au sup : $\n{P+Q}\leq \n{P} +\n{Q} $.\\
+$\bullet$ Definition : Supposons $\n{P} =0$, $P$ est donc nul sur $B$. Par densité de $\gln{C}$ dans $\mn{C}$, on peut trouver $U \in \gln{C} \cap \mathring{B} $. Soit $\lambda$ une valeur propre de $U$ (il en existe toujours car son polynome caractéristique est scindé sur $\m{C}$) et $X$ un vecteur propre associé, comme $U$ est inversible, nécéssairement $\lambda \neq 0$. Puisque $\mathring{B}$ est ouvert, il existe $\varepsilon >0 $ tel que $\mathcal{B}(U,\varepsilon)\subset \mathring{B}$ En particulier $\forall t\in \left[0,\varepsilon \right[ \quad P(tU) = 0$. Puis pour $t\in \left[0,\varepsilon \right[ $ : \begin{align*}
+tUX &= t\lambda X\\
+P(tU)X &= P(t\lambda)X = 0
+\end{align*}
+Or $X \neq 0$ donc $P(t\lambda) =0$, $\lambda$ étant non nul, $P$ admet une infinité de racines dans $\m{C}$, donc $P=0$. (Remarquons que cela définit même une norme sur $\m{C}\left[X\right] $.)\\
+\\
+Puisque $f$ est continue on a $\car{A_n} \to \car{A}$ pour $\n{.}$ i.e $\n{\car{A_n}-\car{A}} \to 0$ i.e la suite de fonctions $(\car{A_n})_n$ converge uniformément vers $\car{A}$ sur $B$. Donc pour $n$ suffisament grand, $A_n\in B $ et \begin{align*}\n{\car{A_n}(A_n)-\car{A}(A)}_{\infty} &\leq \n{\car{A_n}(A_n)-\car{A}(A_n)}_{\infty} + \n{\car{A}(A_n)-\car{A}(A)}_{\infty}\\ &\leq \n{\car{A_n}-\car{A}} + \n{\car{A}(A_n)-\car{A}(A)}_{\infty} \end{align*}
+On a vu que le terme de gauche tend vers 0, celui de droite tend aussi vers 0 par continuité de $M\mapsto \car{A}(M)$ comme polynome.
+On a bien $\car{A_n}(A_n) \to \car{A}(A)$. 
 }
 
 
