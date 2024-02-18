@@ -48,7 +48,7 @@
   \paragraph{Solution :} #3 $ \\ \\ \\$
 }%-------------------------------------------------------------------------------------
 \exercice{1}{
-Soit $(G,.)$ un groupe fini dont tous les élément sont d'ordre 2, montrer que son
+Soit $(G,.)$ un groupe fini dont tous les éléments sont d'ordre 2, montrer que son
 cardinal est une puissance de 2.}
 {On propose 2 solution, la première très astucieuse et jolie et la deuxième plus accessible et généralisable.
 \paragraph{Solution 1:}
@@ -471,6 +471,51 @@ y'^2 + 2yy' + y^2 &= f^2 \\
 La fonction $\int_0y^2$ étant croissante car de dérivée $y^2 \geq 0$ et majorée, elle admet un limite en $+\infty$. Il en est de même pour $\int_0y'^2$, on voit donc avec (2) que $y^2$
  converge également en $+\infty$, notons $l$ sa limite puisque $\int_0^{+\infty}y^2$ est convergente, nécéssairement $l=0$. Donc \[ \lim_{x\to+\infty}y(x) =0\].
 }
+
+\exercice{19}{
+Soit $f : \m{R} \longrightarrow \mn{R}$ dérivable, montrer que :
+\[ \tx{det}(f)' = \tx{Tr(Com}(f)^Tf')
+\] de deux manières différentes.
+}{
+Première méthode. Notons $f_{i,j}$ les applications coordonnés de $f$ dans la base cannonique.
+\begin{align*}
+\tx{Tr(Com}(f)^Tf') &= \sum_{i=1}^n \left[\tx{Com(}f)^T f'\right]_{i,i} \\
+&= \sum_{i=1}^n \sum_{k=1}^n \left[\tx{Com}(f)^T\right]_{i,k}f'_{k,i} \\ &=\sum_{i=1}^n \sum_{k=1}^n (-1)^{i+k}\Delta_{k,i}f'_{k,i}\\
+\end{align*}
+Pause, calculons $\Delta_{k,i}$ pour $1\leq i,k\leq n$, en notant $\tilde{f}$ la fonction à valeurs dans $\mathcal{M}_{n-1}(\m{R})$ déduite de $f$ en retirant la k-ème ligne et la i-ème colone : \\
+\begin{align*}
+\Delta_{k,i} &= \tx{det}(\tilde{f})\\
+&= \sum_{\sigma \in S_{n-1}}\varepsilon(\sigma)\prod_{j=1}^{n-1}\tilde{f}_{\sigma(j),j} \\
+&= \sum_{\sigma \in S_{n-1}}\prod_{l<m}\Bigl(\frac{\sigma(l)-\sigma(m)}{l-m}\Bigr)\prod_{j=1}^{n-1}\tilde{f}_{\sigma(j),j} \\
+&= \sum_{\sigma \in S_n,\sigma(i)=k}\prod_{l<m,l,m \neq i } \Bigl(\frac{\sigma(l)-\sigma(m)}{l-m}\Bigr)\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}
+\\&= \sum_{\sigma \in S_n,\sigma(i)=k}\varepsilon(\sigma)\prod_{l\neq i }^n\Bigl(\frac{\sigma(l)-\sigma(i)}{l-i}\Bigr)^{-1}
+\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}
+\\&= \sum_{\sigma \in S_n,\sigma(i)=k}\varepsilon(\sigma)\prod_{l\neq i }^n\Bigl(\frac{l-i}{\sigma(l)-k}\Bigr)
+\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}\end{align*} La valeur absolue de ce premier produit vaut 1 et il contient $i-1$ numérateurs négatifs et $k-1$ dénominateurs négatifs, il vaut donc $(-1)^{i-1 + k-1} = (-1)^{i+k}$. Reprenons le calcul : 
+\begin{align*}
+\tx{Tr(Com}(f)^Tf') &= 
+\sum_{i=1}^n \sum_{k=1}^n (-1)^{i+k}\Delta_{k,i}f'_{k,i} \\
+&= \sum_{i=1}^n \sum_{k=1}^n (-1)^{2i+2k}\sum_{\sigma \in S_n,\sigma(i)=k}\varepsilon(\sigma)
+\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}f'_{k,i}
+\\&= \sum_{i=1}^n\sum_{\sigma \in S_n}\varepsilon(\sigma)
+\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}f'_{\sigma(i),i}
+\\
+&= \sum_{\sigma \in S_n}\sum_{i=1}^n\varepsilon(\sigma)
+\prod_{j =1, j\neq i}^{n}f_{\sigma(j),j}f'_{\sigma(i),i}
+\\&= \sum_{\sigma \in S_n}\varepsilon(\sigma)
+\Biggl(\prod_{j =1}^{n}f_{\sigma(j),j}\Biggr)'
+\\
+&= \tx{det}(f)'
+\end{align*}
+Deuxième méthode. On va calculer la différentielle du determinant : 
+
+Soit $M \in \mn{R}$, on note $\nabla M$ le gradient du determinant en $M$ et $(e_{i,j})_{1\leq i, j \leq n}$ la base canonique. 
+Avec la formule de dérivation des formes $n$-linéaires et en notant $C_i$ la fonction "colone $i$" sur $\mn{R}$:\begin{align*} \left[\nabla M\right]_{i,j} = \frac{\partial \tx{det}}{\partial e_{i,j}}(M) =& \sum_{k=1}^n \tx{det}(C_1,\ldots,\frac{\partial C_k}{\partial e_{i,j}},\ldots,C_n)(M)\\
+ =& \;\tx{det}(C_1,\ldots,\frac{\partial C_j}{\partial e_{i,j}},\ldots,C_n)(M)\\
+ =& \begin{vmatrix}m_{1,1}& \ldots& 0&\ldots& m_{1,n}& \\ \vdots & \ddots & \vdots & \ddots &\vdots \\m_{i,1}& \ldots& 1& \ldots& m_{i,n}&\\ \vdots & \ddots & \vdots & \ddots &\vdots \\ m_{n,1}& \ldots& 0&\ldots & m_{n,n}& \end{vmatrix} \end{align*}
+En développant suivant la $j$-ème colone il vient $\left[\nabla M\right]_{i,j} = (-1)^{i+j} \Delta_{i,j}$ puis $\nabla M = \tx{Com}(M)$. Notons $D_M$ la différentielle du det en $M$, alors : \[ \forall H \in \mn{R}\quad D_M(H) = <\nabla M,H> = \tx{Tr(Com}(M)^TH) \]
+Puis, $\forall x \in \m{R} \quad \tx{det}(f)'(x) = d(\tx{det}\circ f)_x(1) = D_{f(x)}\circ\; df_x(1) = \tx{Tr(Com}(f(x))^Tf'(x))$
+ }
 
 \printbibliography %Prints bibliography
 

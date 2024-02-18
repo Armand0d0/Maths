@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  28 JAN 2024 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  18 FEB 2024 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,11 +915,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-75.
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 518--518
+[][] 
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
+$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
+
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+20.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [14] (./main.aux)
+) [16] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -927,13 +947,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18447 strings out of 480171
- 316605 string characters out of 5894488
+ 18451 strings out of 480171
+ 316641 string characters out of 5894488
  1045062 words of memory out of 5000000
  36133 multiletter control sequences out of 15000+600000
  484647 words of font info for 71 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 60i,12n,68p,1155b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,68p,1155b,1757s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.60
 0pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.
 600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
@@ -958,10 +978,10 @@ onts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/
 stmary10.pfb>
-Output written on main.pdf (14 pages, 290681 bytes).
+Output written on main.pdf (16 pages, 298933 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
