@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  18 FEB 2024 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.10.24)  23 FEB 2024 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,184 +671,194 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
 2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 85--85
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 50--91
+
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 85--98
+Underfull \hbox (badness 10000) in paragraph at lines 50--91
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 50--91
+[] 
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 91--104
 [] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 115--115
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 121--121
 [][] 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 115--123
-[] 
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 123--133
-[] 
- []
-
-
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 133--142
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 121--129
 [] 
  []
 
 [2]
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 142--157
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 129--139
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 139--148
+[] 
+ []
 
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 148--163
+[] 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 157--169
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+
+ []
+
+
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 163--175
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 236--236
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 242--242
 [][] 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 256--256
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 262--262
 [][] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 272--272
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 278--278
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 278--278
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 272--284
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 278--290
 [] 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 284--313
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 290--319
 [] 
  []
 
 [7]
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 313--339
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 319--345
 [] 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--342
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--364
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 364--364
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 370--370
 [][] 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--430
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 430--430
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 436--436
 [][] 
  []
 
 [10]
-Overfull \hbox (3.83678pt too wide) detected at line 430
+Overfull \hbox (3.83678pt too wide) detected at line 436
  \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 b[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; l\OT1/cmr/m/n/10 ) \OMS/cmsy/
 m/n/10 ^^T \OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]\OT1/cmr/m/n/
@@ -865,27 +875,27 @@ n/10 (\OML/cmm/m/it/10 l; f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l\OT1/cmr/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--430
+Underfull \hbox (badness 10000) in paragraph at lines 436--436
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 457--457
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 463--463
 [][] 
  []
 
 
-Overfull \hbox (0.77191pt too wide) in paragraph at lines 457--457
+Overfull \hbox (0.77191pt too wide) in paragraph at lines 463--463
 \OML/cmm/m/it/10 ^^_[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 ) = \O
 ML/cmm/m/it/10 ^^_[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 )$\T1/cm
 r/m/n/10 . Mais cette ma-trice est di-ag-o-nale, et s'écrit $[][]\OT1/cmr/m/n/1
@@ -896,47 +906,47 @@ n/10 )$\T1/cmr/m/n/10 . Où $\OML/cmm/m/it/10 Sp\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--457
+Underfull \hbox (badness 10000) in paragraph at lines 463--463
 
  []
 
 [13]
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 457--473
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 463--479
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+Underfull \hbox (badness 10000) in paragraph at lines 479--480
 
  []
 
 
-Overfull \hbox (10.1325pt too wide) in paragraph at lines 518--518
+Overfull \hbox (10.1325pt too wide) in paragraph at lines 524--524
 [][] 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 518--518
+Underfull \hbox (badness 10000) in paragraph at lines 524--524
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 $
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 518--519
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-20.
+26.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [16] (./main.aux)
@@ -958,9 +968,9 @@ Here is how much of TeX's memory you used:
 0pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1000.
 600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti100
 0.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
-440.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
-m1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-cbx1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec
+440.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+crm1000.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec
 /ecrm1200.600pk> </home/armand/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
 ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
@@ -978,9 +988,9 @@ onts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/
 stmary10.pfb>
-Output written on main.pdf (16 pages, 298933 bytes).
+Output written on main.pdf (16 pages, 299907 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
+ 495 PDF objects out of 1000 (max. 8388607)
  209 compressed objects within 3 object streams
  67 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)

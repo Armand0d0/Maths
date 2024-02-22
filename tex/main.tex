@@ -47,6 +47,12 @@
 }
   \paragraph{Solution :} #3 $ \\ \\ \\$
 }%-------------------------------------------------------------------------------------
+Voici une séléction d'exercices sympatiques rencontrés lors de ma prépa en MPI* au lycée Paul Valery. Je les ai séléctionné essentiellement selon le
+ plaisir que j'ai eu à les chercher ainsi que l'élégance de leurs solutions. On y trouvera notament des exercices type oral ENS dont la difficulté rend le fait 
+ de trouver une solution plus satifaisant encore, ce qui joue indéniablement un rôle dans ma séléction. Lors de la rédaction des solutions (qui est encore en cours), je
+  m'efforce de décrire non seulement la preuve mais aussi le cheminement pour y parvenir. En esperant éviter cet effet "bouquin" de rédaction minimale où l'on ne donne 
+  que la synthèse et cache l'analyse qui pourtant est aussi instructive. Par ailleurs ma rédaction est loin d'être parfaite, merci de me faire part de toute erreur, 
+  coquille ou suggestion.\\ \\ \\% \begin{center}***\end{center} \\
 \exercice{1}{
 Soit $(G,.)$ un groupe fini dont tous les éléments sont d'ordre 2, montrer que son
 cardinal est une puissance de 2.}
@@ -146,13 +152,13 @@ $GL(E)$. Démontrer que tout sous espace vectoriel de $E$ stable par tous les é
 supplémentaire également stable par tout les élément de $G$.
 }{
   Disons d'un sous-espace qu'il est stable par $G$ si il est stable par tous les éléments de $G$.
-Soit $F$ un sous-espace vectoriel de $E$ stable par $G$. On va travailler avec des projecteurs, il est bien de se rendre compte que à un couple de sous espaces supplémentaire on peut toujours faire correspondre un projecteur et vice versa car le noyeau et l'image d'un projecteur sont supplémentaires. Soit donc $p$ un projecteur sur $F$. L'idée pricipale pour construire un supplémentaire stable par $G$ est de chercher à construire un projecteur à partir de $p$ et $G$ ayant aussi $F$ pour image et dont le noyeau est stable par $G$.
-On a déja remarqué dans l'exercice 2 que la somme des éléments d'un sous groupe fini de $GL_n(\mathbb{K})$ divisée par son cardinal est un projecteur, on peut donc s'en inspirer et poser $s = \frac{1}{n} \sum_{g \in G}^n gpg^{-1}$, où $n= card(G)$,
-de cette manière : \[\ s^2 = \frac{1}{n^2} \sum_{g \in G}^n\sum_{h \in G}^n hph^{-1}gpg^{-1} = \frac{1}{n}\sum_{g \in G}^ngpg^{-1} =s \] car $p_{|F} =id_F$ et $F =Im(p)$ est stable par $G$. $s$ est le projecteur recherché, on a $Im(s) = F$ en effet :\\ $\boxed{\subset}$ Cette incluson est claire pusique $F$ est stable par $G$.\\ $\boxed{\supset}$ si $x\in F$  alors $ x = p(x) = \frac{1}{n}\sum_{g \in G}^n gpg^{-1}(x) \in Im(s)$ car $p_{|F} =id_F$.\\
+Soit $F$ un sous-espace vectoriel de $E$ stable par $G$. On va travailler avec des projecteurs, il est bien de se rendre compte que à un couple de sous espaces supplémentaire on peut toujours faire correspondre un projecteur et vice versa car le noyeau et l'image d'un projecteur sont supplémentaires. Soit donc $p$ un projecteur sur $F$. L'idée principale pour construire un supplémentaire stable par $G$ est de chercher à construire un projecteur à partir de $p$ et $G$ ayant aussi $F$ pour image et dont le noyeau est stable par $G$.
+On a déja remarqué dans l'exercice 2 que la somme des éléments d'un sous groupe fini de $GL_n(\mathbb{K})$ divisée par son cardinal est un projecteur, on peut donc s'en inspirer et poser $s = \frac{1}{n} \sum_{g \in G} gpg^{-1}$, où $n= card(G)$,
+de cette manière : \[\ s^2 = \frac{1}{n^2} \sum_{g \in G}\sum_{h \in G} hph^{-1}gpg^{-1} = \frac{1}{n}\sum_{g \in G}gpg^{-1} =s \] car $p_{|F} =id_F$ et $F =Im(p)$ est stable par $G$. $s$ est le projecteur recherché, on a $Im(s) = F$ en effet :\\ $\boxed{\subset}$ Cette incluson est claire pusique $F$ est stable par $G$.\\ $\boxed{\supset}$ si $x\in F$  alors $ x = p(x) = \frac{1}{n}\sum_{g \in G} gpg^{-1}(x) \in Im(s)$ car $p_{|F} =id_F$.\\
 On a aussi $Ker(s)$ stable par $G$ : soit $x\in Ker(s)$, et $h \in G$ \\
-\[\ s(h(x)) = \frac{1}{n} \sum_{g\in G}^n gpg^{-1}(h(x)) = \frac{1}{n} \sum_{g\in G}^n hh^{-1}gp(h^{-1}g)^{-1}(x) = hs(x) = 0\] car $g \mapsto h^{-1}g$ est une permutation de $G$. Donc $Ker(s)$ est stable par $G$. Finalement comme $ Ker(s) \oplus F = Ker(s) \oplus Im(s) = E,\;\; Ker(s)$ est le supplémentaire recherché.\\ 
+\[\ s(h(x)) = \frac{1}{n} \sum_{g\in G} gpg^{-1}(h(x)) = \frac{1}{n} \sum_{g\in G} hh^{-1}gp(h^{-1}g)^{-1}(x) = hs(x) = 0\] car $g \mapsto h^{-1}g$ est une permutation de $G$. Donc $Ker(s)$ est stable par $G$. Finalement comme $ Ker(s) \oplus F = Ker(s) \oplus Im(s) = E,\;\; Ker(s)$ est le supplémentaire recherché.\\ 
 \\ $Remarque :$ Cette preuve est vraie pour tout corps $\mathbb{K}$ tel que $n.1_{\mathbb{K}}\neq 0$ (pour pouvoir diviser par $n$), c'est à dire dont la caractéristique ne divise pas $n$.\\
-\paragraph{Autre solution si $\mathbb{K} =\mathbb{R}$ :} On identifie $E$ et $\mathbb{R}^p$ que l'on munit du produit scalaire canonique $<.,.>$, et on pose le produit scalaire $(.|.)$ sur $E$ définit par : \[\ \forall x,y \in E \quad (x|y) = \sum_{g\in G}^n <g(x),g(y)> 
+\paragraph{Autre solution si $\mathbb{K} =\mathbb{R}$ :} On identifie $E$ et $\mathbb{R}^p$ que l'on munit du produit scalaire canonique $<.,.>$, et on pose le produit scalaire $(.|.)$ sur $E$ définit par : \[\ \forall x,y \in E \quad (x|y) = \sum_{g\in G} <g(x),g(y)> 
 \] On travaille dans l'espace euclidien $(E,(.|.)) $, encore par la bijection $g\mapsto hg$ pour $h \in G$, on constate que tout les éléments de $G$ conservent le produit scalaire, donc sont autoadjoints et donc $F^{\perp}$ est un supplémentaire de $F$ stable par $G$.
 }
 \exercice{8}{ Démontrer que $GL_n(\mathbb{C})$ est connexe par
