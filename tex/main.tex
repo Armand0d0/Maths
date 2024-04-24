@@ -37,6 +37,8 @@
 \newcommand{\car}[1]{\ensuremath{\chi_{_{#1}}}}
 \newcommand{\n}[1]{\ensuremath{\|#1\|}}
 \newcommand{\gln}[1]{\ensuremath{GL_n(\mathbb{#1})}}
+\newcommand{\comm}[1]{}
+
 \setlength\parindent{0pt}
 \newcommand{\exercice}[3]{
   \fbox{%
@@ -369,70 +371,94 @@ Soit  $x \in \mathbb{R}$:
 Alors \[\ S(x) := \Biggl( \sum_{n=1}^{\infty} \Bigl(\frac{x}{n}\Bigr)^n\Biggr)^{\frac{1}{x}} = \;\; x^{\frac{1}{x}}\Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}} \] D'abord, $x^{\frac{1}{x}} = e^{\frac{\ln(x)}{x}} \to 1$ Puis pour $x \geq 1$ : \[\ \Biggl(\int_0^1 t^{-xt} \mathrm{d}t\Biggr)^{\frac{1}{x}}  = \Biggl(\int_0^1 (t^{-t})^x \mathrm{d}t\Biggr)^{\frac{1}{x}} = \|f\|_{_x} \] Où $f: t \mapsto t^{-t}$. On se rappelle alors de l'exercice affirmant que \[\ \|f\|_{_x} \xrightarrow[x \to \infty]{} \|f\|_{_\infty} = \sup_{t\in [0,1]}|f(t)| \] Avec une rapide étude de $f$ on trouve que sa borne sup vaut $e^{\frac{1}{e}}$. Ainsi, \[\ \lim_{x \to \infty}S(x) = e^{\frac{1}{e}}\quad _{_\square} \] 
 }
 
-\exercice{16 (D'après \cite{igor})}{
+\exercice{16}{
 
 Soit (E,d) un espace métrique
  compact et \begin{math} 
 f: E\rightarrow  E  
-\end{math} continue  
+\end{math}  
 telle que : \\ 
 \[\
 \forall x,y \in E\;\;\; d(f(x),f(y)) \geq d(x,y) \;\;\;\;\;\;(*)
-\]\
-Démontrer que f est bijective puis que f est une isométrie.
-}{
-Soient\(\ x,y \in E \)\ tels que \(\ 
-f(x) = f(y) \)\ alors $ 0 = d(f(x),f(y)) \geq d(x,y) \geq 0 $
-donc $x= y $, ainsi $f$ est injective.\\
-Pour la surjectivité fixons $y\in E$ et remarquons que pour $x\in E$ et $n\in \mathbb{N}$ \[\
-d(f^{n+1}(x),f^{n}(y)) \geq d(f(x),y)
-\]\ On cherche donc $x$ tel que $d(f^{n+1}(x),f^{n}(y)) \rightarrow 0$.
-Comme $E$ est compact on peut trouver  une extractrice $\phi$ et $l\in E$ telle que : \[\ f^{\phi(n)}(y)\rightarrow l
-\]\  Posons $x_n = f^{\phi(n+1)-\phi(n)-1}(y)$ et $a_n = f^{\phi(n)+1}(x_n)$
- Alors 
-\[\ a_n = 
-f^{\phi(n)+1}(f^{\phi(n+1)-\phi(n)-1}(y)) = f^{\phi(n+1)}(y) \rightarrow l
-\]\ 
-Extrayons une deuxième fois : il existe une extractrice $\psi$ et $x \in E$ tels que : 
-\[\ x_{\psi(n)} \rightarrow x
-\]\ Comme 
-\[\ f^{\phi(\psi(n))+1}(x_{\psi(n)}) \rightarrow l,  \]\ (c'est une suite extraite de $a_n$), on aimerait en conclure que : 
-\[\ f^{\phi(\psi(n))+1}(x) \rightarrow l
-\]\ Attention ici à ne pas essayer d'utiliser la continuité de $f^{\phi(\psi(n))+1}$ , la dépendance en $n$ nous en empèche.
-Nous allons pour cela montrer le résultat suivant : 
-\paragraph{Lemme}
-Soient $u_n \in \mathbb{N}^{\mathbb{N}}$ tendant vers $+\infty$, $b_n \in E^{\mathbb{N}} $ tendant vers $b \in E$ et $l,l'$  dans $E$ tels que : 
-\[\ f^{u_n}(b_n) \rightarrow l \;\;\;et\;\;\;  f^{u_n}(b) \rightarrow l' \] Alors $l = l'$
-\paragraph{Preuve}
-Soit $\epsilon > 0$ : \[\ 
-   \forall k,n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),l') + d(l',f^{u_k}(b))  + d(f^{u_k}(b),f^{u_k}(b_n))+d(f^{u_k}(b_n),l) \;\;\;\;(1)\]\ De plus, en appliquant (*), si $u_n \geq u_k$:  
-\[\  d(f^{u_k}(b_n),l) \leq d(f^{u_n}(b_n),f^{u_n-u_k}(l)) \leq d(f^{u_n}(b_n),l) + d(l,f^{u_n-u_k}(l))  \leq d(f^{u_n}(b_n),l) + d(f^{u_k}(l),f^{u_n}(l)) \]\
-Par compacité, on dispose d'une extractrice $\phi$ et de $l_1 \in E$ telle que $f^{u_{\phi(p)}}(l)  \rightarrow l_1 \\ $
-Finalement, en injectant dans (1) : \[\ d(f^{u_n}(b),l) \leq d(f^{u_n}(b),l') + d(l',f^{u_k}(b))  + d(f^{u_k}(b),f^{u_k}(b_n))+ d(f^{u_n}(b_n),l) + d(f^{u_k}(l),l_1) + d(l_1,f^{u_n}(l)) \]\
-On peut donc  trouver $N_1 \in \mathbb{N} $ tel que $\forall p \geq N_1 \;\;\;d(f^{u_{\phi(p)}}(l),l_1) \leq \epsilon $ Il existe aussi $N_2 \in \mathbb{N} $ tel que $\forall p \geq N_2 \;\;\;d(l',f^{u_p}(b)) \leq \epsilon$. Fixons donc $ p_1 \geq max(N1,N2) $ et posons $ k = \phi(p_1) $ Ainsi $k \geq p_1 \geq N_2 $ et $k\geq N_1$ Donc \[\ \forall n \in \mathbb{N}\;\;\; d(f^{u_n}(b),l) \leq 2\epsilon + d(f^{u_n}(b),l')   + d(f^{u_k}(b),f^{u_k}(b_n))+ d(f^{u_n}(b_n),l) +  d(l_1,f^{u_n}(l)) \]\ Maintenant que k est fixé, on peut utiliser la continuité de $f^{u_k} \; : \;\\ \exists N_3 \in \mathbb{N} \;\;\; \forall p \geq N_3\;\;\; d(f^{u_k}(b),f^{u_k}(b_n)) \leq \epsilon \;\;\;\;\;\;  $ ($N_3$ dépend de k)$
-\\ \exists N_4 \in \mathbb{N} \;\;\; \forall p \geq N_4\;\;\; d(f^{u_p}(b_p),l) \leq \epsilon \\ \\$ Soit donc $p_2 \geq max(N_1,N_2,N_3,N_4)$ et $n := \phi(p_2)  $ vérifiant $u_n \geq u_k \;\;\;\; $ (possible car $u$ tends vers $+\infty) \\ $ donc $ n \geq max(N_1,N_2,N_3,N_4) \\ $ On peut conclure : \[\  d(f^{u_n}(b),l) \leq 6\epsilon\]\ Ainsi $l$ est une valeur d'adhérence de $(f^{u_n}(b))_n$ et comme elle converge vers $l'$ on a bien $l=l'$ $_\Box \\ \\$
+\]
+1) Démontrer que $f$ est une isométrie bijective.\\ 
+Soit $g:E\to E$ surjective telle que : \[\ \forall x,y \in E \;\;\; d(g(x),g(y)) \leq d(x,y) \quad (**)\] 2) démontrer que $g$ est aussi une isométrie bijective.
+}{ 1) Soient $x,y \in E$, $E^2$ étant compact on peut extraire une suite convergente de la suite $(f^n(x),f^n(y))_n$, notons : $(f^{\phi(n)}(x),f^{\phi(n)}(y)) \to (l,l')$.
+   puis, comme $\phi$ est strictement croissante : \begin{align*} d(f(x),f(y)) &\leq d(f^{\phi(n+1)-\phi(n)}(x),f^{\phi(n+1)-\phi(n)}(y)) \\& \leq d(f^{\phi(n+1)-\phi(n)}(x),x) + d(x,y)+d(f^{\phi(n+1)-\phi(n)}(y),y) \\
+    & \leq d(f^{\phi(n+1)}(x),f^{\phi(n)}(x)) + d(x,y) + d(f^{\phi(n+1)}(y),f^{\phi(n)}(y)) \quad \text{ par }(*)
+    \end{align*} Or $(f^{\phi(n)}(x))_n$ converge, donc $d(f^{\phi(n+1)}(x),f^{\phi(n)}(x)) \to 0$, de la même manière, \\ $d(f^{\phi(n+1)}(y),f^{\phi(n)}(y)) \to 0$, donc en passant à la
+    limite, \[d(f(x),f(y)) \leq d(x,y) \\ \text{ donc } d(f(x),f(y)) = d(x,y)\] i.e $f$ est une isométrie. Elle est donc en particulier 1-lipschitzienne, donc continue.\\
+    Montrons que $f$ est bijective.\\
+    Injectivité. Soient $ x,y \in E $ tels que $ 
+    f(x) = f(y) $ alors $ 0 = d(f(x),f(y)) \geq d(x,y) \geq 0 $
+    donc $x= y $\\
+    Surjectivité. Soit $ x\in E$, par compacité, la suite $(f^n(x))_n$ admet une valeur d'adhérence $l$ : $\exists \phi$ strictement croissante telle que 
+    $f^{\phi(n)}(x) \to l$. Avec (*) , on a \[\ d(f^{\phi(n+1)-\phi(n)}(x),x) \leq d(f^{\phi(n+1)}(x),f^{\phi(n)}(x)) \to 0 \]
+    donc $f^{\phi(n+1)-\phi(n)}(x) \to x$. Or $\forall n\in \m{N} \quad \phi(n+1)-\phi(n) \geq 1$ donc $ x \in \overline{f(E)}$
+    Mais $f(E)$ est fermé comme image continue d'un compact, donc $f(E) = \overline{f(E)}$ puis $x\in f(E)\\$.
 
-Pour utiliser notre lemme, on a donc besoin que $f^{\phi(\psi(n))+1}(x)$ converge,
- ce n'est pas forcément le cas, extrayons : il existe $ \gamma $ une extractrice
-  et $l' \in E$ tels que \[\ f^{\phi(\psi(\gamma(n)))+1}(x) \rightarrow l' \]\ 
-  Notons $u_n = \phi(\psi(\gamma(n)))$. On a : \[\ f^{u_n+1}(x_{\psi(\gamma(n))})
-   \rightarrow l \;\;\;\; et \;\;\;\; x_{\psi(\gamma(n))} \rightarrow x\]\ Donc par
-    le lemme : \[\ f^{u_n+1}(x) \rightarrow l \]\ On obtient donc
-     \[\ d(f^{u_n + 1}(x),f^{u_n}(y)) \geq d(f(x),y) \] En passant 
-     a la limite : \[\ d(f(x),y) \leq d(l,l) = 0 \] Ainsi $f(x) = y $, 
-     ce qui démontre la surjectivité de $f$.  \[\ \]
-
-Démontrons maintenant que $f$ est une isométrie : $\\ $ Comme $f$ est bijective on peut maintenant écrire : \[\ \forall x,y \in E \;\; d(x,y) \geq d(f^{-1}(x),f^{-1}(y))\;\;\;\;\;\;\;\; (**) \]
-Pour $x,y \in E$ posons $\forall n \in \mathbb{N} \;\; d_n = d(f^{-n}(x),f^{-n}(y))$. D'après (**), $ (d_n)$ est décroissante, de plus elle est minorée par 0, elle est donc convergente, notons $l$ sa limite. Comme $E$ est compact il existe $\gamma , \psi $ des extractrices et $a,b\in E$ tels que \[\
-f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
-\] Notons $\phi = \gamma \circ \psi$. Alors comme $d_{\phi(n)} \rightarrow l $ on a : $d(a,b) = l$, de plus par continuité de $f$ : \[\ f^{-\phi(n) + 1}(x) \rightarrow f(a), \;\;\; f^{-\phi(n) + 1}(y) \rightarrow f(b) \] Donc \[\ d(f^{-\phi(n) + 1}(x),f^{-\phi(n) + 1}(y)) \rightarrow d(f(a),f(b)) \]
-Mais $d_{\phi(n) - 1}$ tends aussi vers $l$ donc  \[\ d(f(a),f(b)) = d(a,b) = l\] Ce qui ressemble pas mal a ce q'on cherche, on le veut pour tout $a,b \in E $. Fixons donc $a,b \in E$. Il suffirait donc d' avoir l' existence de $ x,y\in E$ ainsi que de $\gamma$ et $\psi$ des extractrices telles que \[\
-f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
-\] Commençons avec $a$, ce n'est pas évident... On peut essayer d'exprimer $x$ en fonction de $a$ et naivement écrire ``$ x = f^{\gamma(n)}(a)"$ ce qui n'a pas de sens, mais $(f^{n}(a))_n$ est bien une suite de $E$ dont on peut donc extraire une suite convergente notons justement, pour voir $\gamma$ l'extractrice et  $x$ la limite :  \[\ f^{\gamma(n)}(a) \rightarrow x \] Notons $x_n = f^{\gamma(n)}(a)$. Alors comme $f^{-\gamma(n)}(x_n) = a$ on a : \[\ f^{-\gamma(n)}(x_n) \rightarrow a \;\;\; et \;\;\; x_n \rightarrow x\] Cela nous rappelle notre lemme, il nous manque l'hypothèse : ``$f^{-\gamma(n)}(x)$ converge '', mais quitte a extraire et a remplacer $\gamma$ par $\gamma \circ \gamma'$ par exemple, on peut la supposer vraie. Autre problème : la suite $(-\gamma(n))_n $ ne tends pas vers $+\infty \\ \\$
-  Adaptons notre lemme aux suites de $\mathbb{Z}^{\mathbb{N}}$ qui tendent vers $-\infty$. En regardant la preuve on voit que l'hypothèse ``$u_n \in \mathbb{N}^{\mathbb{N}}$ '' n'est utilisé que pour avoir la continuité de $f^{u_k}$ car $f^{-1}$ n'est a priori pas continue, sauf qu'en fait si car elle est directement 1-lipschitzienne par (**) on peut donc prendre $u \in \mathbb{Z}^{\mathbb{N}}$. L'hypothèse ``$u_n \rightarrow +\infty$'' par contre  est nécessaire pour trouver $n$ vérifiant $u_n \geq u_k$ et appliquer la majoration $d(f^{u_k}(b_n),l) \leq d(f^{u_n}(b_n),f^{u_n-u_k}(l))$. Bon... reprenons les mêmes notations et changeons la première ligne en : \[\ 
-   \forall n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),f^{u_n}(b_n))+d(f^{u_n}(b_n),l) \;\;\;\;\]\ Dès que $u_n$ est négative, $d(f^{u_n}(b),f^{u_n}(b_n)) \leq d(b,b_n)$ en itérant (**). Mais comme $b_n \rightarrow b$ et $f^{u_n}(b_n) \rightarrow l$ on a directement $f^{u_n}(b) \rightarrow l$ puis $l = l'$. Donc c'est bon, c'était plus simple comme ça !  $ \\ \\ $ On peut donc utiliser cette version du  lemme et conclure que $f^{-\gamma(n)}(x)
-   \rightarrow a $.
-   Tout se passe exactement pareil pour trouver $y$ et $\psi$ si  on commence par extraire de la suite $(f^{\gamma(n)}(b))_n$. Cela conclut la preuve.
+    2) Démontrons que $g$ est injective :\\
+    Soient $x,y\in E$ tels que $g(x)=g(y)$. Pour tout $n\in \m{N}$ $g^n$ est encore surjective, donc il existe $x_n,y_n\in E$ tel que $g^n(x_n) = x $ et $g^n(y_n) = y$.
+    On extrait par compacité de $E^2$ une suite convergente de $(x_n,y_n)_n$ :  $(x_{\phi(n)},y_{\phi(n)}) \to (l,l')$.
+    Puis par (**) : \[\ d(g^{\phi(n)}(l),x) = d(g^{\phi(n)}(l),g^{\phi(n)}(x_{\phi(n)})) \leq d(l,x_{\phi(n)}) \to 0 \] d'où \[\ g^{\phi(n)}(l) \to x\]
+    De même, \[\ g^{\phi(n)}(l') \to y\]
+    Puisque $\phi(n+1) \geq \phi(n)+1$: \[\ d(g^{\phi(n+1)}(l),g^{\phi(n+1)}(l')) \leq d(g^{\phi(n)+1}(l),g^{\phi(n)+1}(l')) \]
+    Mais par continuité de $g$ en $x$ et $y$, $ g^{\phi(n)+1}(l) \to g(x)$ et $g^{\phi(n)+1}(l') \to g(y)$.\\
+    $d$ est continue, donc \[\ d(g^{\phi(n)+1}(l),g^{\phi(n)+1}(l')) \to d(g(x),g(y)) = 0\]
+    par encadrement \[\ d(g^{\phi(n+1)}(l),g^{\phi(n+1)}(l')) \to 0\]
+    Or \[\ d(g^{\phi(n+1)}(l),g^{\phi(n+1)}(l')) \to d(x,y)\] donc $d(x,y) = 0$ et $ x=y$.\\
+    $g$ est donc bijective et $g^{-1}$ vérifie (*) donc c'est une isométrie, et donc $g$ aussi. $_\square$
+    \comm{
+      Pour la surjectivité fixons $y\in E$ et remarquons que pour $x\in E$ et $n\in \mathbb{N}$ \[\
+      d(f^{n+1}(x),f^{n}(y)) \geq d(f(x),y)
+      \]\ On cherche donc $x$ tel que $d(f^{n+1}(x),f^{n}(y)) \rightarrow 0$.
+      Comme $E$ est compact on peut trouver  une extractrice $\phi$ et $l\in E$ telle que : \[\ f^{\phi(n)}(y)\rightarrow l
+      \]\  Posons $x_n = f^{\phi(n+1)-\phi(n)-1}(y)$ et $a_n = f^{\phi(n)+1}(x_n)$
+       Alors 
+      \[\ a_n = 
+      f^{\phi(n)+1}(f^{\phi(n+1)-\phi(n)-1}(y)) = f^{\phi(n+1)}(y) \rightarrow l
+      \]\ 
+      Extrayons une deuxième fois : il existe une extractrice $\psi$ et $x \in E$ tels que : 
+      \[\ x_{\psi(n)} \rightarrow x
+      \]\ Comme 
+      \[\ f^{\phi(\psi(n))+1}(x_{\psi(n)}) \rightarrow l,  \]\ (c'est une suite extraite de $a_n$), on aimerait en conclure que : 
+      \[\ f^{\phi(\psi(n))+1}(x) \rightarrow l
+      \]\ Attention ici à ne pas essayer d'utiliser la continuité de $f^{\phi(\psi(n))+1}$ , la dépendance en $n$ nous en empèche.
+      Nous allons pour cela montrer le résultat suivant : 
+      \paragraph{Lemme}
+      Soient $u_n \in \mathbb{N}^{\mathbb{N}}$ tendant vers $+\infty$, $b_n \in E^{\mathbb{N}} $ tendant vers $b \in E$ et $l,l'$  dans $E$ tels que : 
+      \[\ f^{u_n}(b_n) \rightarrow l \;\;\;et\;\;\;  f^{u_n}(b) \rightarrow l' \] Alors $l = l'$
+      \paragraph{Preuve}
+      Soit $\epsilon > 0$ : \[\ 
+         \forall k,n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),l') + d(l',f^{u_k}(b))  + d(f^{u_k}(b),f^{u_k}(b_n))+d(f^{u_k}(b_n),l) \;\;\;\;(1)\]\ De plus, en appliquant (*), si $u_n \geq u_k$:  
+      \[\  d(f^{u_k}(b_n),l) \leq d(f^{u_n}(b_n),f^{u_n-u_k}(l)) \leq d(f^{u_n}(b_n),l) + d(l,f^{u_n-u_k}(l))  \leq d(f^{u_n}(b_n),l) + d(f^{u_k}(l),f^{u_n}(l)) \]\
+      Par compacité, on dispose d'une extractrice $\phi$ et de $l_1 \in E$ telle que $f^{u_{\phi(p)}}(l)  \rightarrow l_1 \\ $
+      Finalement, en injectant dans (1) : \[\ d(f^{u_n}(b),l) \leq d(f^{u_n}(b),l') + d(l',f^{u_k}(b))  + d(f^{u_k}(b),f^{u_k}(b_n))+ d(f^{u_n}(b_n),l) + d(f^{u_k}(l),l_1) + d(l_1,f^{u_n}(l)) \]\
+      On peut donc  trouver $N_1 \in \mathbb{N} $ tel que $\forall p \geq N_1 \;\;\;d(f^{u_{\phi(p)}}(l),l_1) \leq \epsilon $ Il existe aussi $N_2 \in \mathbb{N} $ tel que $\forall p \geq N_2 \;\;\;d(l',f^{u_p}(b)) \leq \epsilon$. Fixons donc $ p_1 \geq max(N1,N2) $ et posons $ k = \phi(p_1) $ Ainsi $k \geq p_1 \geq N_2 $ et $k\geq N_1$ Donc \[\ \forall n \in \mathbb{N}\;\;\; d(f^{u_n}(b),l) \leq 2\epsilon + d(f^{u_n}(b),l')   + d(f^{u_k}(b),f^{u_k}(b_n))+ d(f^{u_n}(b_n),l) +  d(l_1,f^{u_n}(l)) \]\ Maintenant que k est fixé, on peut utiliser la continuité de $f^{u_k} \; : \;\\ \exists N_3 \in \mathbb{N} \;\;\; \forall p \geq N_3\;\;\; d(f^{u_k}(b),f^{u_k}(b_n)) \leq \epsilon \;\;\;\;\;\;  $ ($N_3$ dépend de k)$
+      \\ \exists N_4 \in \mathbb{N} \;\;\; \forall p \geq N_4\;\;\; d(f^{u_p}(b_p),l) \leq \epsilon \\ \\$ Soit donc $p_2 \geq max(N_1,N_2,N_3,N_4)$ et $n := \phi(p_2)  $ vérifiant $u_n \geq u_k \;\;\;\; $ (possible car $u$ tends vers $+\infty) \\ $ donc $ n \geq max(N_1,N_2,N_3,N_4) \\ $ On peut conclure : \[\  d(f^{u_n}(b),l) \leq 6\epsilon\]\ Ainsi $l$ est une valeur d'adhérence de $(f^{u_n}(b))_n$ et comme elle converge vers $l'$ on a bien $l=l'$ $_\Box \\ \\$
+      
+      Pour utiliser notre lemme, on a donc besoin que $f^{\phi(\psi(n))+1}(x)$ converge,
+       ce n'est pas forcément le cas, extrayons : il existe $ \gamma $ une extractrice
+        et $l' \in E$ tels que \[\ f^{\phi(\psi(\gamma(n)))+1}(x) \rightarrow l' \]\ 
+        Notons $u_n = \phi(\psi(\gamma(n)))$. On a : \[\ f^{u_n+1}(x_{\psi(\gamma(n))})
+         \rightarrow l \;\;\;\; et \;\;\;\; x_{\psi(\gamma(n))} \rightarrow x\]\ Donc par
+          le lemme : \[\ f^{u_n+1}(x) \rightarrow l \]\ On obtient donc
+           \[\ d(f^{u_n + 1}(x),f^{u_n}(y)) \geq d(f(x),y) \] En passant 
+           a la limite : \[\ d(f(x),y) \leq d(l,l) = 0 \] Ainsi $f(x) = y $, 
+           ce qui démontre la surjectivité de $f$.  \[\ \]
+      
+      Démontrons maintenant que $f$ est une isométrie : $\\ $ Comme $f$ est bijective on peut maintenant écrire : \[\ \forall x,y \in E \;\; d(x,y) \geq d(f^{-1}(x),f^{-1}(y))\;\;\;\;\;\;\;\; (**) \]
+      Pour $x,y \in E$ posons $\forall n \in \mathbb{N} \;\; d_n = d(f^{-n}(x),f^{-n}(y))$. D'après (**), $ (d_n)$ est décroissante, de plus elle est minorée par 0, elle est donc convergente, notons $l$ sa limite. Comme $E$ est compact il existe $\gamma , \psi $ des extractrices et $a,b\in E$ tels que \[\
+      f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
+      \] Notons $\phi = \gamma \circ \psi$. Alors comme $d_{\phi(n)} \rightarrow l $ on a : $d(a,b) = l$, de plus par continuité de $f$ : \[\ f^{-\phi(n) + 1}(x) \rightarrow f(a), \;\;\; f^{-\phi(n) + 1}(y) \rightarrow f(b) \] Donc \[\ d(f^{-\phi(n) + 1}(x),f^{-\phi(n) + 1}(y)) \rightarrow d(f(a),f(b)) \]
+      Mais $d_{\phi(n) - 1}$ tends aussi vers $l$ donc  \[\ d(f(a),f(b)) = d(a,b) = l\] Ce qui ressemble pas mal a ce q'on cherche, on le veut pour tout $a,b \in E $. Fixons donc $a,b \in E$. Il suffirait donc d' avoir l' existence de $ x,y\in E$ ainsi que de $\gamma$ et $\psi$ des extractrices telles que \[\
+      f^{-\gamma(n)}(x) \rightarrow a, \;\;\; f^{-\gamma(\psi(n))}(y) \rightarrow b
+      \] Commençons avec $a$, ce n'est pas évident... On peut essayer d'exprimer $x$ en fonction de $a$ et naivement écrire ``$ x = f^{\gamma(n)}(a)"$ ce qui n'a pas de sens, mais $(f^{n}(a))_n$ est bien une suite de $E$ dont on peut donc extraire une suite convergente notons justement, pour voir $\gamma$ l'extractrice et  $x$ la limite :  \[\ f^{\gamma(n)}(a) \rightarrow x \] Notons $x_n = f^{\gamma(n)}(a)$. Alors comme $f^{-\gamma(n)}(x_n) = a$ on a : \[\ f^{-\gamma(n)}(x_n) \rightarrow a \;\;\; et \;\;\; x_n \rightarrow x\] Cela nous rappelle notre lemme, il nous manque l'hypothèse : ``$f^{-\gamma(n)}(x)$ converge '', mais quitte a extraire et a remplacer $\gamma$ par $\gamma \circ \gamma'$ par exemple, on peut la supposer vraie. Autre problème : la suite $(-\gamma(n))_n $ ne tends pas vers $+\infty \\ \\$
+        Adaptons notre lemme aux suites de $\mathbb{Z}^{\mathbb{N}}$ qui tendent vers $-\infty$. En regardant la preuve on voit que l'hypothèse ``$u_n \in \mathbb{N}^{\mathbb{N}}$ '' n'est utilisé que pour avoir la continuité de $f^{u_k}$ car $f^{-1}$ n'est a priori pas continue, sauf qu'en fait si car elle est directement 1-lipschitzienne par (**) on peut donc prendre $u \in \mathbb{Z}^{\mathbb{N}}$. L'hypothèse ``$u_n \rightarrow +\infty$'' par contre  est nécessaire pour trouver $n$ vérifiant $u_n \geq u_k$ et appliquer la majoration $d(f^{u_k}(b_n),l) \leq d(f^{u_n}(b_n),f^{u_n-u_k}(l))$. Bon... reprenons les mêmes notations et changeons la première ligne en : \[\ 
+         \forall n\in \mathbb{N} \;\;\; d(f^{u_n}(b),l) \leq d(f^{u_n}(b),f^{u_n}(b_n))+d(f^{u_n}(b_n),l) \;\;\;\;\]\ Dès que $u_n$ est négative, $d(f^{u_n}(b),f^{u_n}(b_n)) \leq d(b,b_n)$ en itérant (**). Mais comme $b_n \rightarrow b$ et $f^{u_n}(b_n) \rightarrow l$ on a directement $f^{u_n}(b) \rightarrow l$ puis $l = l'$. Donc c'est bon, c'était plus simple comme ça !  $ \\ \\ $ On peut donc utiliser cette version du  lemme et conclure que $f^{-\gamma(n)}(x)
+         \rightarrow a $.
+         Tout se passe exactement pareil pour trouver $y$ et $\psi$ si  on commence par extraire de la suite $(f^{\gamma(n)}(b))_n$. Cela conclut la preuve.
+      }
 }
 
 \exercice{17 (Preuve topologique de Cayley-Hamilton)}{
@@ -522,7 +548,22 @@ Avec la formule de dérivation des formes $n$-linéaires et en notant $C_i$ la f
 En développant suivant la $j$-ème colone il vient $\left[\nabla M\right]_{i,j} = (-1)^{i+j} \Delta_{i,j}$ puis $\nabla M = \tx{Com}(M)$. Notons $D_M$ la différentielle du det en $M$, alors : \[ \forall H \in \mn{R}\quad D_M(H) = <\nabla M,H> = \tx{Tr(Com}(M)^TH) \]
 Puis, $\forall x \in \m{R} \quad \tx{det}(f)'(x) = d(\tx{det}\circ f)_x(1) = D_{f(x)}\circ\; df_x(1) = \tx{Tr(Com}(f(x))^Tf'(x))$
  }
+\exercice{20}{Soit $(a_i)_{i\in I}$ une famille de réels strictement positifs telle que $ \sum_{i\in I}a_i < \infty $, montrer que $I$ est au plus dénombrable.
+}
+{Notons $I_n = \{i\in I , a_i \geq \frac{1}{n}\}$, pour tout $n \in \mathbb{N}^* \quad I_n $ est fini puisque sinon la somme serait infinie. De plus comme les $a_i$
+ sont strictement positifs, $I = \bigcup_{n \in \mathbb{N}^*} I_n \quad I $ est donc au plus dénombrable comme réunion dénombrable d'ensembles au plus dénombrables.}
 
+\exercice{21}{
+On considère l'anneau $A=\mathcal{C}^0([a,b],\m{R})$ muni du produit terme à terme.\\
+Pour $x\in [a,b]$ on note $I_x = \{f\in A, f(x) =0\}$\\
+Soit $I$ un idéal de $A$ , démontrer que $ I=A\text{ ou }\exists x \in [a,b] \quad I \subset I_x.$
+}{
+Supposons : $ \forall x\in [a,b] \quad\exists f_x \in I \quad f_x(x)\neq 0$ et  montrons que $I=A.\\$ Soit $x\in [a,b]$, alors par continuité de $ f_x$ en $x$ $\exists J_x $  un intervalle 
+ouvert contenant $x$ tel que $ \forall y\in J_x\cap [a,b]\quad f_x(y)\neq 0$ puis $ [a,b] \subset  \bigcup_{x\in [a,b]} J_x$ or $[a,b]$ est compact, donc d'après le lemme de Borel-Lebesgue, on 
+peut en extraire un recouvrement fini d'ouverts (relatifs à $[a,b]$) :
+ $[a,b] \subset \bigcup_{i=1}^n J_{x_i} $ on conclut en remarquant que $g := \sum_{i=1}^n f_{x_i}^2$ est dans $I$ et est inversible , car strictement positive sur $[a,b]$,
+  donc pour tout $h\in A$, $h = g(g^{-1}h)$, et par absorbtion $h\in I$ puis $I=A.$
+}
 \printbibliography %Prints bibliography
 
 \end{document} 
